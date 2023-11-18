@@ -1,4 +1,4 @@
-from labyrinth.Wall import Wall
+from Wall import Wall
 from twodimension.Point import Point
 
 class Door(Wall):
