@@ -4,7 +4,7 @@ from math import sqrt
 class Axis(Enum):
     """
     Represents dimensional axes
-    """
+    """ 
     X = 1
     Y = 2
     Z = 3
@@ -98,7 +98,7 @@ class Point:
         """
         self_distance = self.distance(Point(0,0))
         other_distance = other.distance(Point(0,0))
-        return self_distance >= other_distance
+        return self_distance >= other_distance      
 
 
     def distance(self, other: 'Point') -> float:
@@ -109,7 +109,8 @@ class Point:
         """
         return sqrt((self.x-other.x)**2 + (self.y-other.y)**2)
     
-    def getPointPair(self) -> (float,float):
+
+    def get_point_pair(self) -> (float,float):
         """
         Get the point into a (x,y) format
 
@@ -117,8 +118,7 @@ class Point:
             A (float, float) tuple as (x,y)
         """
         return (self.x, self.y)
-
-
+    
 class FiniteLine:
     """
     Simple representation of a  finite line in a 2 dimemensional way,
@@ -131,6 +131,8 @@ class FiniteLine:
             Right or top edge of the line and its represented by the point in (x,y).
         self.leght : float
             Length of the line must be the distance between the edge points of the line
+        
+        !Edge points should be different points
 
     """
 
@@ -147,9 +149,8 @@ class FiniteLine:
         self.edge1 = left_or_botton
         self.edge2 = right_or_top
         self.length = self.edge1.distance(self.edge2)
-       
 
-    def isParalleltoX(self) -> bool:
+    def is_parallel_to_X(self) -> bool:
         """
         Tells if the line is parallel to X axis.
 
@@ -159,7 +160,7 @@ class FiniteLine:
         """
         return (self.edge1.y - self.edge2.y) == 0
     
-    def isParalleltoY(self) -> bool:
+    def is_parallel_to_Y(self) -> bool:
         """
         Tells if the line is parallel to Y axis.
 
@@ -169,12 +170,36 @@ class FiniteLine:
         """
         return (self.edge1.x - self.edge2.x) == 0
     
-    def isCo_Linear(self, point: Point) -> bool:
+    def get_slope(self) -> float:
+        """
+        Returns the slope of this straight line
+
+        returns:
+            Inifinite = float('inf'), if this line is parallel to Y axis.
+            Normal float slope in other case.
+        """
+
+        if self.is_parallel_to_Y(): return float('inf')
+
+        return ((self.edge2.y - self.edge1.y) / (self.edge2.x - self.edge1.x))
+    
+    def is_parallel(self, other_line: 'FiniteLine') -> bool:
+        """
+        Tells if two lines are parallel
+
+        Two lines are parallel if they have the same slope
+        """
+
+        return self.get_slope == other_line.get_slope
+
+    def is_colinear(self, point: Point) -> bool:
         """
         Tell if this line and the provided point are co-linear/
         could be contained in the same straigth line
 
         (x2-x1)(y3-y1) - (y2-y1)(x3-x1)=0
+
+        TODO check if abs() is needed
         """
         eq = ((self.edge2.x-self.edge1.x) * (point.y - self.edge1.y)) 
         - ((self.edge2.y-self.edge1.y) * (point.x - self.edge1.x))
@@ -192,10 +217,76 @@ class FiniteLine:
         """
         point_list = filter(lambda x:isinstance(x,Point),args)
 
-        for point in list:
-            if not(self.isCo_Linear(point)): 
+        for point in point_list:
+            if not(self.is_colinear(point)): 
                 return False
             elif (point.distance(self.edge1) > self.length) or (point.distance(self.edge2) > self.length):
                 return False
         
         return True
+
+class Rectangle:
+    """
+    Rectangle in 2 dimension that is defined by 4 edge points and 4 edge finites lines
+
+    Points should be aling into straight line show the edge lines will be parallel two for two
+
+    Atributes:
+        bottom_left: Point
+            should be aling with upper_left & bottom_right
+        upper_left: Point
+            should be aling with upper_right & bottom_left  
+        bottom_right: Point
+        upper_right: Point
+
+        bottom_line 
+        upper_line 
+        righ_line 
+        left_line
+    """
+    def __init__(self, bottom_left: Point, upper_left: Point, bottom_right: Point
+                 , upper_right: Point):
+        """
+        Initialices the Rectangle given the 4 edge Points
+        & also initialices with that the four lines that also define the rectangle
+        """
+
+        self.bottom_left = bottom_left
+        self.upper_left = upper_left
+        self.upper_right = upper_right
+        self.bottom_right = bottom_left
+
+        #Define the four lines of the rectangle
+        self.bottom_line = FiniteLine(self.bottom_left, self.bottom_right)
+        self.upper_line = FiniteLine(self.upper_left, self.upper_right)
+        self.righ_line = FiniteLine(self.bottom_right, self.upper_right)
+        self.left_line = FiniteLine(self.bottom_left, self.upper_left)
+
+        #Define data of rectangle
+        self.height = self.upper_line.length 
+        self.width = self.bottom_line.length
+
+        #Create the center point of the rectangle
+        center_x = self.bottom_left.x + (self.width / 2)
+        center_y = self.bottom_left.y + (self.height / 2)
+        self.center = Point(center_x, center_y)
+    
+    def contains(self, point: Point) -> bool:
+        """
+        Tells if a point is inside of the rectangle 
+        (includes also the edges)
+
+        Args:
+            point: Point
+                Point to check if its inside of the rectangle
+        return:
+            True if the point is inside of the rectangle
+            False if other case
+        """
+        inside_width = abs((point.x - self.center.x )) <= (self.width/2)
+        inside_height = abs((point.y - self.center.y)) <= (self.height/2)
+        
+        return (inside_width and inside_height)
+    
+    
+
