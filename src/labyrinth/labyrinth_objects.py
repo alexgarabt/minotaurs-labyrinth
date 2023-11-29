@@ -1,6 +1,5 @@
-from two_dimension import FiniteLine
-from two_dimension import Axis
-from two_dimension import Point
+## These file include the object that could be in the labyrinth
+from two_dimension import Point, FiniteLine
 from UnAlingObjectError import UnAlingObjectError
 
 class Wall(FiniteLine):
@@ -12,10 +11,6 @@ class Wall(FiniteLine):
     and the height is infinitesimally large.
     The length of the Wall is variable.
     So the wall cant be jumped or traspased.
-
-    Atributes:
-        axis_state : Axis.ENUM
-            Defines to wat axis is parallel the Wall
     """
     def __init__(self, left_or_botton: Point, right_or_top: Point):
         """
@@ -23,9 +18,11 @@ class Wall(FiniteLine):
         """
         super().__init__(left_or_botton, right_or_top)
 
-        if self.isParalleltoX(): self.axis_state = Axis.X
-        elif self.isParalleltoY(): self.axis_state = Axis.Y
-        else: raise UnAlingObjectError("Error: Line is not parallel to X or Y axes")
+        if  not(self.is_parallel_to_X) and not(self.is_parallel_to_Y):
+            raise UnAlingObjectError("Error: Line is not parallel to X or Y axes")
+
+    def is_door() -> bool:
+        return False
 
 class Door(Wall):
     """
@@ -33,12 +30,8 @@ class Door(Wall):
 
     The door is a passable wall but the 
     length of the door is always 1.
-
-    Atributes
-        DOOR_LENGTH : int
-            DOOR_LENGTH = 1, length of the door
     """
-    
+
     DOOR_LENGTH = 1
 
     def __init__(self, left_or_botton: Point, right_or_top: Point):
@@ -46,3 +39,14 @@ class Door(Wall):
         super().__init__(left_or_botton, right_or_top)
         if self.length != self.DOOR_LENGTH:
             raise ValueError("Error: distance between points should be 1")
+
+
+    def is_door() -> bool:
+        return True
+
+
+
+
+        
+        
+        

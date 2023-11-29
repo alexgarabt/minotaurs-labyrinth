@@ -98,7 +98,11 @@ class Point:
         """
         self_distance = self.distance(Point(0,0))
         other_distance = other.distance(Point(0,0))
-        return self_distance >= other_distance      
+        return self_distance >= other_distance   
+
+    def __hash__(self) -> int:
+        return hash((self.x, self.y))
+
 
 
     def distance(self, other: 'Point') -> float:
@@ -180,6 +184,7 @@ class FiniteLine:
         """
 
         if self.is_parallel_to_Y(): return float('inf')
+        elif self.is_parallel_to_X(): return 0
 
         return ((self.edge2.y - self.edge1.y) / (self.edge2.x - self.edge1.x))
     
@@ -187,22 +192,21 @@ class FiniteLine:
         """
         Tells if two lines are parallel
 
-        Two lines are parallel if they have the same slope
+        Two lines are parallel if they have the same |slope| is absolute value
         """
 
-        return self.get_slope == other_line.get_slope
+        return abs(self.get_slope()) == abs(other_line.get_slope())
 
     def is_colinear(self, point: Point) -> bool:
         """
         Tell if this line and the provided point are co-linear/
-        could be contained in the same straigth line
+        could be contained in the same straigth inifite line
 
         (x2-x1)(y3-y1) - (y2-y1)(x3-x1)=0
 
         TODO check if abs() is needed
         """
-        eq = ((self.edge2.x-self.edge1.x) * (point.y - self.edge1.y)) 
-        - ((self.edge2.y-self.edge1.y) * (point.x - self.edge1.x))
+        eq = ((self.edge2.x - self.edge1.x) * (point.y - self.edge1.y)) - ((self.edge2.y-self.edge1.y) * (point.x - self.edge1.x))
         return eq == 0
       
     def contains(self, *args: 'list[Point]') -> bool:
@@ -224,6 +228,10 @@ class FiniteLine:
                 return False
         
         return True
+    
+    def __repr__(self) -> str:
+        """Returns a String representation of the point -> (x,y)"""
+        return "".join(["Line(", self.edge1, ", ", self.edge2, ")"])
 
 class Rectangle:
     """
@@ -254,7 +262,7 @@ class Rectangle:
         self.bottom_left = bottom_left
         self.upper_left = upper_left
         self.upper_right = upper_right
-        self.bottom_right = bottom_left
+        self.bottom_right = bottom_right
 
         #Define the four lines of the rectangle
         self.bottom_line = FiniteLine(self.bottom_left, self.bottom_right)
@@ -287,6 +295,26 @@ class Rectangle:
         inside_height = abs((point.y - self.center.y)) <= (self.height/2)
         
         return (inside_width and inside_height)
+    
+    def distance(self, point: Point) -> float:
+        """
+        Return the distance bettween this rectangle and the point
+
+        The distance is calculate from the center point and the provided point
+        """
+        return self.center.distance(point)
+    
+    def __hash__(self) -> int:
+        """
+        The hash is calculate as the hash of a tuple how contains two points
+        """
+        return hash((self.upper_left, self.bottom_right))
+    
+    def __repr__(self) -> str:
+        """Returns a String representation of the Rectangle-> center point, height and width"""
+        return "".join(["Rectangle: Center", self.center, ", Height: ", self.height, ", Width: ", self.width])
+    
+
     
     
 
