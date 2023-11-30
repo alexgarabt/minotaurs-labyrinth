@@ -113,6 +113,15 @@ class Point:
         """
         return sqrt((self.x-other.x)**2 + (self.y-other.y)**2)
     
+    def manhattan_distance(self, other: 'Point') -> float:
+        """
+        Calculates the distance between this point and the provided one 
+        using manhattan distance.
+
+        Manhattan distance = |self.x - other.x| + |self.y - other.y|
+        """
+        return abs(self.x - other.x) + abs(self.y - other.y)
+    
 
     def get_point_pair(self) -> (float,float):
         """
@@ -303,6 +312,15 @@ class Rectangle:
         The distance is calculate from the center point and the provided point
         """
         return self.center.distance(point)
+
+    def manhattan_distance(self, other: Point) -> float:
+        """
+        Calculates the distance between the center of this rectangle and the provided one 
+        using manhattan distance.
+
+        Manhattan distance = |self.center.x - other.x| + |self.center.y - other.y|
+        """
+        return abs(self.center.x - other.x) + abs(self.center.y - other.y)
     
     def __hash__(self) -> int:
         """
