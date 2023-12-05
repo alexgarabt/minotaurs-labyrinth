@@ -46,6 +46,7 @@ class Point:
         return: 
             If the provided point is equal
         """
+        if not(isinstance(other, Point)): return False
         return (self.x == other.x) and (self.y == other.y)
 
     def __lt__(self, other: 'Point') -> bool:
@@ -102,8 +103,6 @@ class Point:
 
     def __hash__(self) -> int:
         return hash((self.x, self.y))
-
-
 
     def distance(self, other: 'Point') -> float:
         """
@@ -218,7 +217,7 @@ class FiniteLine:
         eq = ((self.edge2.x - self.edge1.x) * (point.y - self.edge1.y)) - ((self.edge2.y-self.edge1.y) * (point.x - self.edge1.x))
         return eq == 0
       
-    def contains(self, *args: 'list[Point]') -> bool:
+    def contains_point(self, *args: 'list[Point]') -> bool:
         """
         Tells if the points in *args are contained in this line.
 
@@ -238,9 +237,22 @@ class FiniteLine:
         
         return True
     
+    def contains_line(self, contained_line: 'FiniteLine') -> bool:
+        """
+        Tells if the provided line is contaned in this one
+        """ 
+        return self.contains_point(contained_line.edge1, contained_line.edge2)
+    
     def __repr__(self) -> str:
         """Returns a String representation of the point -> (x,y)"""
         return "".join(["Line(", self.edge1, ", ", self.edge2, ")"])
+    
+    def __hash__(self) -> int:
+        return hash((self.edge1, self.edge2))
+    
+    def __eq__(self, other: 'FiniteLine') -> bool:
+        if not(isinstance(other, FiniteLine)): return False
+        return (self.edge1 == other.edge1) and (self.edge2 == other.edge2)
 
 class Rectangle:
     """
@@ -261,33 +273,57 @@ class Rectangle:
         righ_line 
         left_line
     """
-    def __init__(self, bottom_left: Point, upper_left: Point, bottom_right: Point
-                 , upper_right: Point):
-        """
-        Initialices the Rectangle given the 4 edge Points
-        & also initialices with that the four lines that also define the rectangle
-        """
+    def __init__(self, 
+                 bottom_left: Point = None, 
+                 upper_left: Point = None, 
+                 bottom_right: Point = None, 
+                 upper_right: Point = None, 
+                 center: Point = None, 
+                 height: float = None, 
+                 width: float = None):
+        if (bottom_left is not None and upper_left is not None and 
+            bottom_right is not None and upper_right is not None):
+            # First constructor logic
+            self.bottom_left = bottom_left
+            self.upper_left = upper_left
+            self.upper_right = upper_right
+            self.bottom_right = bottom_right
 
-        self.bottom_left = bottom_left
-        self.upper_left = upper_left
-        self.upper_right = upper_right
-        self.bottom_right = bottom_right
+            # Define the four lines of the rectangle
+            self.bottom_line = FiniteLine(self.bottom_left, self.bottom_right)
+            self.upper_line = FiniteLine(self.upper_left, self.upper_right)
+            self.right_line = FiniteLine(self.bottom_right, self.upper_right)
+            self.left_line = FiniteLine(self.bottom_left, self.upper_left)
 
-        #Define the four lines of the rectangle
-        self.bottom_line = FiniteLine(self.bottom_left, self.bottom_right)
-        self.upper_line = FiniteLine(self.upper_left, self.upper_right)
-        self.righ_line = FiniteLine(self.bottom_right, self.upper_right)
-        self.left_line = FiniteLine(self.bottom_left, self.upper_left)
+            # Define data of rectangle
+            self.height = self.upper_line.length
+            self.width = self.bottom_line.length
 
-        #Define data of rectangle
-        self.height = self.upper_line.length 
-        self.width = self.bottom_line.length
+            # Create the center point of the rectangle
+            center_x = self.bottom_left.x + (self.width / 2)
+            center_y = self.bottom_left.y + (self.height / 2)
+            self.center = Point(center_x, center_y)
 
-        #Create the center point of the rectangle
-        center_x = self.bottom_left.x + (self.width / 2)
-        center_y = self.bottom_left.y + (self.height / 2)
-        self.center = Point(center_x, center_y)
-    
+        elif center is not None and height is not None and width is not None:
+            # Second constructor logic
+            self.center = center
+            self.height = height
+            self.width = width
+
+            self.bottom_left = Point((self.center.x - width/2), (self.center.y - height/2))
+            self.upper_left = Point(self.bottom_left.x, self.bottom_left.y + height)
+            self.upper_right = Point(self.upper_left.x + width, self.upper_left.y)
+            self.bottom_right = Point(self.bottom_left.x + width, self.bottom_left.y)
+
+            # Define the four lines of the rectangle
+            self.bottom_line = FiniteLine(self.bottom_left, self.bottom_right)
+            self.upper_line = FiniteLine(self.upper_left, self.upper_right)
+            self.right_line = FiniteLine(self.bottom_right, self.upper_right)
+            self.left_line = FiniteLine(self.bottom_left, self.upper_left)
+
+        else:
+            raise ValueError("Invalid parameters for Rectangle constructor")
+
     def contains(self, point: Point) -> bool:
         """
         Tells if a point is inside of the rectangle 
@@ -328,9 +364,13 @@ class Rectangle:
         """
         return hash((self.upper_left, self.bottom_right))
     
+    def __eq__(self, other: 'Rectangle'):
+        if not(isinstance(other, Rectangle)): return False
+        conditions = (self.center == other.center) and (self.height == other.height) and (self.width == self.width)
+    
     def __repr__(self) -> str:
         """Returns a String representation of the Rectangle-> center point, height and width"""
-        return "".join(["Rectangle: Center", self.center, ", Height: ", self.height, ", Width: ", self.width])
+        return "".join(["Rectangle: Center", self.center.__repr__(), ", Height: ", self.height.__repr__(), ", Width: ", self.width.__repr__()])
     
 
     

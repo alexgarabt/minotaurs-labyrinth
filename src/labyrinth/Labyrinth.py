@@ -1,6 +1,7 @@
 from .labyrinth_objects import Door, Wall
 from .two_dimension import Point, Rectangle
 from .graphs import CellNode, GridCellGraph
+import math
 
 
 class Labyrinth:
@@ -53,10 +54,15 @@ class Labyrinth:
         self.teseo = Point(0,0)     # Teseo is in the origin Postion
         
 
-        #Create the structure of the labyrinth without the labyrinth objects
-        self._labyrinth_nodes = self._create_nodes()                         # Create the nodes
+        # Create the structure of the labyrinth without the labyrinth objects
+        # Structure [ [first_xline_nodes], [second_xline_nodes], [last_xline_node]]
+        self._labyrinth_nodes = self._create_nodes()                         # Create the nodes, list with all the nodes
+        
+        # Structure {CellNode:GridCellGrap} the nodes are keys to its graph structure
         self._graph_dictionary = self._associate_nodes(self._labyrinth_nodes) # Dictionary contains the graph nodes
-        self.add_labyrinth_objs(self._walls, self._doors)            
+        
+        self.add_labyrinth_objs(self._walls, self._doors)
+                
     
 
     def _create_nodes(self) ->'list[list[CellNode]]':
@@ -98,6 +104,8 @@ class Labyrinth:
 
         return:
             Return a Dictionary {CellNode:GridCellGraph}
+
+            The actual node is the key, and the GridCellGraph of that node is the value.
 
         A node is neightbour to its continous nodes, north one, south one, east one, west one.
         Warning, edge nodes are a especial case
@@ -177,24 +185,120 @@ class Labyrinth:
 
         return graph_dictionary
 
-
-    def add_labyrinth_objs(self, walls: 'list[Wall]', doors: 'list[Door]'):
-        pass
-
-    def eliminate_labyrinth_obs(self, labyrinth_graph: GridCellGraph):
-        pass
-
-    def init_labyrinth_graph(self):
+    def get_node_contains(self, point: Point) -> CellNode:
         """
-        Initializes self._labyrinth as a GridCellGraph 
-        that contains all the map divide in sectors of CELL_AREA.
+        Gets the node that contains this point.
+        
+        Requires that the self._labyrinth_nodes is initialized
 
-        The sectors will be represented as Nodes and the full labyrinth 
-        will be a GridCellGraph structure
+        If a point its in the edges of various nodes, 
+        it returns the most UPPER & LEFT node that contains the point.
+
+        return:
+            One CellNode that contains the point.
+            If no node contains the point in the self._labyrinth_nodes, it returns None.
         """
-    
-    
 
+        x = math.floor(point.x)
+        y = math.floor(point.y)
+
+        if((len(self._labyrinth_nodes) >= y) and (len(self._labyrinth_nodes[0]) >= x)):
+            return self._labyrinth_nodes[y][x]
+        return None
+
+    def _add_labyrinth_walls_lenght_1(self, walls: 'list[Wall]'):
+        """
+        Add the Wall in the list to the cells that contains it
+
+        Wall lenght should be 1.
+        
+        Labyrinth nodes must be created before and also associated
+        So requires the self._graph_dictionary initialized
+        
+        Arguments:
+            walls: list[Wall]
+                list with walls to add into the labyrinth
+        """
+        for ith in walls:
+                
+                #Get the medium point to get a edge point in onle one edge of the rectangle in the node
+                medium_x = (ith.edge1.x + ith.edge2.x)/2
+                medium_y = (ith.edge2.y + ith.edge2.y)/2
+                medium_p = Point(medium_x, medium_y)
+
+                #Get one of the node that contains the door
+                actual_node: CellNode = self.get_node_contains(medium_p)
+                if(actual_node == None): continue
+
+                #Get the graph of the node, for get the associated nodes
+                grid_graph_node: GridCellGraph = self._graph_dictionary[actual_node]
+
+                # Get the other nodes that contains the door
+                if(ith.is_parallel_to_X()):
+
+                    # The door is in the bottom line of the actual node,
+                    # So the south node of the actual node have also the door in its north line
+                    if(actual_node.cell.bottom_line.contains_point(medium_p)):
+                        actual_node.south_obj = ith
+                        grid_graph_node.south_node.north_obj = ith
+
+                    # The door is in the upper line of the actual node,
+                    # So the north node of the actual node have also the door in its south line
+                    elif(actual_node.cell.upper_line.contains_point(medium_p)):
+                        actual_node.north_obj = ith
+                        grid_graph_node.north_node.south_obj = ith
+
+                elif(ith.is_parallel_to_Y()):
+
+                    # The door is in the left line of the actual node,
+                    # So the west node of the actual node have also the door in its east line
+                    if(actual_node.cell.left_line.contains_point(medium_p)):
+                        actual_node.west_obj = ith
+                        grid_graph_node.west_node.east_obj = ith
+
+                    # The door is in the upper line of the actual node,
+                    # So the east node of the actual node have also the door in its west line
+                    elif(actual_node.cell.right_line.contains_point(medium_p)):
+                        actual_node.east_obj = ith
+                        grid_graph_node.east_node.west_obj = ith
+    
+    def _add_labyrinth_walls(self, walls: 'list[Wall]'):
+        
+        # We will divid the walls into walls of length 1 and add it to the labyrinth
+        list_new_walls = []
+        for ith_wall in walls:
+            #ith_wall: Wall
+            list_new_walls.extend(ith_wall.divide_wall_into_1_length())
+        
+        self._add_labyrinth_walls_lenght_1(list_new_walls)
+
+    def _add_labyrinth_doors(self, doors: 'list[Door]'):
+        self._add_labyrinth_walls_lenght_1(doors)
+
+    def add_labyrinth_objs(self, walls: 'list[Wall]'=[], doors: 'list[Door]'=[]):
+        """
+        Add the doors and the walls into the labyrinth
+
+        See more in the stringdoc of the used methods
+        """
+
+        # First the walls, because doors should overwrite walls if they have the same cell
+        # Second the doors, to overwrite the walls in the same cell
+        self._add_labyrinth_walls(walls)
+        self._add_labyrinth_doors(doors)
+
+    def eliminate_labyrinth_objs(self):
+        #iterate throuth the keys that are the nodes
+        for node in self._graph_dictionary:
+            #node: CellNode
+            node.north_obj = None
+            node.south_obj = None
+            node.west_obj = None
+            node.east_obj = None
+
+    def A_STAR_SEARCH(self):
+        pass
+    
     def _reconstruct_path(came_from: dict, current_node: CellNode) -> 'list[CellNode]':
         """
         Return list with the path to reach the current node from a start node.
@@ -216,4 +320,5 @@ class Labyrinth:
             current_node = came_from[current_node]
             total_path.append(current_node)
         
-        return total_path
+        return total_pathl
+        

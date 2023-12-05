@@ -1,15 +1,4 @@
-from labyrinth_objects import Wall
-from labyrinth_objects import Door
-from two_dimension import Rectangle
-from two_dimension import Point
-from enum import Enum
-
-class Direction(Enum):
-    NORTH = 1
-    SOUTH = 2
-    EAST = 3
-    OEAST = 4
-
+from .two_dimension import Point, Rectangle
 class CellNode:
     """
     CellNode represents a rectangle cell with four sides
@@ -34,10 +23,7 @@ class CellNode:
             Object who defines how to act to pass to west cell
 
     """
-    def __init__(self, area: Rectangle):
-        self.cell = area
-
-    def __init__(self, area: Rectangle, north_obj, south_obj, east_obj, west_obj):
+    def __init__(self, area: Rectangle, north_obj=None, south_obj=None, west_obj=None, east_obj=None):
         self.cell = area
         self.north_obj = north_obj
         self.south_obj = south_obj
@@ -61,27 +47,40 @@ class CellNode:
         self.cost_to_goal = cost
 
     def __hash__(self) -> int:
-        return hash(self.area)
+        return hash(self.cell)
+    
+    def __eq__(self, other: 'CellNode') -> bool:
+        if not(isinstance(other, CellNode)): return False
+        return self.cell == other.cell
+    
+    def __repr__(self) -> str:
+        return "".join([self.cell.__repr__(), 
+                       ", north_obj=", self.north_obj.__repr__(), 
+                       ", south_obj=", self.south_obj.__repr__(),
+                       ", east_obj=", self.east_obj.__repr__(),
+                       ", west_obj=", self.west_obj.__repr__()])
 
     
 class GridCellGraph:
-    def __init__(self, node: CellNode):
-        self.actual_node = node
-        self.north_node = None
-        self.south_node = None
-        self.east_node = None
-        self.west_node = None
 
-    def __init__(self, actual_node: CellNode, 
-                 north_node: CellNode, 
-                 south_node: CellNode, 
-                 east_node: CellNode, 
-                 west_node: CellNode):
+    def __init__(self, actual_node: CellNode, north_node: CellNode= None, south_node: CellNode =None, west_node: CellNode = None,  east_node: CellNode= None):
         self.actual_node = actual_node
         self.north_node = north_node
         self.south_node = south_node
-        self.east_node = east_node
-        self.west_node = west_node
+        self.west_node = east_node
+        self.east_node = west_node
+
+    def __hash__(self) -> int:
+        return hash(self.actual_node)
     
+    def __repr__(self) -> str:
+        return "".join(["ACTUAL: ",
+                        self.actual_node.__repr__(),
+                        ", NEIGHBOURS: ",
+                        self.north_node.__repr__(), "; ",
+                        self.south_node.__repr__(), "; ",
+                        self.east_node.__repr__(), "; ",
+                        self.west_node.__repr__(), "; "
+                        ])
 
 
