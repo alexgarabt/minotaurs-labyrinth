@@ -245,7 +245,7 @@ class FiniteLine:
     
     def __repr__(self) -> str:
         """Returns a String representation of the point -> (x,y)"""
-        return "".join(["Line(", self.edge1, ", ", self.edge2, ")"])
+        return "".join(["Line(", self.edge1.__repr__(), ", ", self.edge2.__repr__(), ")"])
     
     def __hash__(self) -> int:
         return hash((self.edge1, self.edge2))

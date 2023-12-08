@@ -1,6 +1,5 @@
 ## These file include the object that could be in the labyrinth
 from .two_dimension import Point, FiniteLine
-from .UnAlingObjectError import UnAlingObjectError
 
 class Wall(FiniteLine):
     """
@@ -22,7 +21,7 @@ class Wall(FiniteLine):
         super().__init__(left_or_botton, right_or_top)
 
         if  not(self.is_parallel_to_X) and not(self.is_parallel_to_Y):
-            raise UnAlingObjectError("Error: Line is not parallel to X or Y axes")
+            raise ValueError("Error: Line is not parallel to X or Y axes")
         
         if (self.length < 0): 
             raise ValueError("Error: wall shoul be constructued (left -> right) or (bottom -> top)")
@@ -30,9 +29,6 @@ class Wall(FiniteLine):
             int(self.length)
         except ValueError: 
             raise ValueError("Error: wall length should be a integer")
-
-    def is_door() -> bool:
-        return False
     
     def divide_wall_into_1_length(self) -> 'list[Wall]':
         """
@@ -41,28 +37,32 @@ class Wall(FiniteLine):
         return:
             A list with all the new walls
         """
+        LENGTH = 1
 
         result = []
-        for j in range(0, self.length):
+        for j in range(0, int(self.length)):
 
                 first_edge_x = self.edge1.x
-                first_edge_y = self.edge2.y
+                first_edge_y = self.edge1.y
 
                 second_edge_x = first_edge_x
                 second_edge_y = first_edge_y
 
                 if(self.is_parallel_to_X()):
-                    first_edge_x += self.CELL_AREA*(j)
-                    second_edge_x += first_edge_x + 1
+                    first_edge_x += LENGTH*(j)
+                    second_edge_x += 1 + LENGTH*(j)
                 
                 elif(self.is_parallel_to_Y()):
-                    first_edge_y += self.CELL_AREA*(j)
-                    second_edge_y += first_edge_y +1
+                    first_edge_y += LENGTH*(j)
+                    second_edge_y += 1 + LENGTH*(j)
 
                 f_point = Point(first_edge_x, first_edge_y)
                 s_point = Point(second_edge_x, second_edge_y)
                 result.append(Wall(f_point, s_point))
+        
         return result
+    def __repr__(self) -> str:
+        return super().__repr__() + "[W]"
 
 class Door(Wall):
     """
@@ -79,10 +79,9 @@ class Door(Wall):
         super().__init__(left_or_botton, right_or_top)
         if self.length != self.DOOR_LENGTH:
             raise ValueError("Error: distance between points should be 1")
-
-
-    def is_door() -> bool:
-        return True
+    
+    def __repr__(self) -> str:
+        return super().__repr__() + "[D]"
 
 
 

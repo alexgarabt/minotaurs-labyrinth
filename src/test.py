@@ -1,6 +1,7 @@
 import unittest
 from labyrinth.two_dimension import FiniteLine, Point, Rectangle
 from labyrinth.Labyrinth import Labyrinth
+from labyrinth.labyrinth_objects import Wall, Door
 
 class TestPoint(unittest.TestCase):
     """
@@ -243,9 +244,55 @@ class TestRectangle(unittest.TestCase):
 
 def main_test():
 
-    l = Labyrinth()
+    """
+    1 1 1 3
+    2 1 1 3
+    3 1 1 3
+    4 1 1 3
+    1 1 0 3
+    1 2 0 3
+    1 3 0 3
+    1 4 0 3
+    2 1 1
+    2 2 1
+    2 3 1
+    3 1 1
+    3 2 1
+    3 3 1
+    1 2 0
+    3 3 0
+    4 3 1
+    """
+    
+    doors = []
+    doors.append(Door(Point(2,1),Point(2,2)))
+    doors.append(Door(Point(2,2),Point(2,3)))
+    doors.append(Door(Point(2,3),Point(2,4)))
+    doors.append(Door(Point(3,1),Point(3,2)))
+    doors.append(Door(Point(3,2),Point(3,3)))
+    doors.append(Door(Point(3,3),Point(3,4)))
+    doors.append(Door(Point(1,2),Point(2,2)))
+    doors.append(Door(Point(3,3),Point(4,3)))
+    doors.append(Door(Point(4,3),Point(4,4)))
+
+    walls = []
+    walls.append(Wall(Point(1,1), Point(1,4)))
+    walls.append(Wall(Point(2,1), Point(2,4)))
+    walls.append(Wall(Point(3,1), Point(3,4)))
+    walls.append(Wall(Point(4,1), Point(4,4)))
+
+    walls.append(Wall(Point(1,1), Point(4,1)))
+    walls.append(Wall(Point(1,2), Point(4,2)))
+    walls.append(Wall(Point(1,3), Point(4,3)))
+    walls.append(Wall(Point(1,4), Point(4,4)))
+    
+
+    l = Labyrinth(Point(1.5, 1.7), walls, doors)
+    l.get_path_teseo_minotaurs()
+
     
 if __name__ == '__main__':
-    unittest.main()
+    #unittest.main()
+    main_test()
     
 
