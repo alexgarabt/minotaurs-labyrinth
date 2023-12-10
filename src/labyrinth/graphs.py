@@ -9,7 +9,7 @@ class Direction(Enum):
     NORTH = 1
     SOUTH = 2
     WEST = 3
-    EAST = 3
+    EAST = 4
 
 class CellNode:
     """
@@ -50,6 +50,23 @@ class CellNode:
             return False
         else:
             return True
+        
+    def get_obj_in_direction(self, direction: Direction) -> object:
+        """
+        Return the stored object in the provided direction.
+        """
+        if direction == Direction.NORTH:
+            return self.north_obj
+        elif direction == Direction.SOUTH:
+            return self.south_obj
+        elif direction == Direction.WEST:
+            return self.west_obj
+        elif direction == Direction.EAST:
+            return self.east_obj
+        else:
+            return None
+ 
+
     
     def contains(self, point: Point) -> bool:
         """
@@ -73,7 +90,7 @@ class CellNode:
         return hash(self.cell)
     
     def __eq__(self, other: 'CellNode') -> bool:
-        if not(isinstance(other, CellNode)): return False
+        
         return self.cell == other.cell
     
     def __lt__(self, other: 'CellNode') -> bool:
@@ -96,8 +113,8 @@ class CellNode:
         return "".join([self.cell.__repr__(), 
                        ", north_obj=", self.north_obj.__repr__(), 
                        ", south_obj=", self.south_obj.__repr__(),
-                       ", east_obj=", self.east_obj.__repr__(),
-                       ", west_obj=", self.west_obj.__repr__()])  
+                       ", west_obj=", self.west_obj.__repr__(),
+                       ", east_obj=", self.east_obj.__repr__()])  
     
     
 
@@ -107,15 +124,15 @@ class GridCellGraph:
         self.actual_node = actual_node
         self.north_node = north_node
         self.south_node = south_node
-        self.west_node = east_node
-        self.east_node = west_node
+        self.west_node = west_node
+        self.east_node = east_node
 
     def get_neighbours(self) -> 'list[tuple[CellNode, Direction]]':
         a = []
-        if(self.north_node != None): a.append((self.north_node, Direction.NORTH))
-        if(self.south_node != None): a.append((self.south_node, Direction.SOUTH))
-        if(self.west_node != None): a.append((self.west_node, Direction.WEST))
-        if(self.east_node != None): a.append((self.east_node, Direction.EAST))
+        if(self.north_node is not None): a.append((self.north_node, Direction.NORTH))
+        if(self.south_node is not None): a.append((self.south_node, Direction.SOUTH))
+        if(self.west_node is not None): a.append((self.west_node, Direction.WEST))
+        if(self.east_node is not None): a.append((self.east_node, Direction.EAST))
         return a
 
     def __hash__(self) -> int:
@@ -124,23 +141,23 @@ class GridCellGraph:
     def __repr__(self) -> str:
         return "".join(["ACTUAL: ",
                         self.actual_node.__repr__(),
-                        ", NEIGHBOURS: ",
-                        self.north_node.__repr__(), "; ",
-                        self.south_node.__repr__(), "; ",
-                        self.east_node.__repr__(), "; ",
-                        self.west_node.__repr__(), "; "
+                        ", NEIGHBOURS: #N=",
+                        self.north_node.__repr__(), "; #S=",
+                        self.south_node.__repr__(), "; #W=",
+                        self.west_node.__repr__(), "; #E=",
+                        self.east_node.__repr__(), "; "
                         ])
     
 class PriorityQueue:
     def __init__(self) -> None:
-        self.elements: list[tuple[float, GridCellGraph]] = []
+        self.elements: list[tuple[float, CellNode]] = []
 
     def empty(self) -> bool:
         return not self.elements
 
-    def put(self, item: GridCellGraph, priority: float):
+    def put(self, item: CellNode, priority: float):
         heapq.heappush(self.elements, (priority, item))
     
-    def get(self) -> GridCellGraph:
+    def get(self) -> CellNode:
         return heapq.heappop(self.elements)[1]
 

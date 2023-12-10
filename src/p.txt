@@ -1,0 +1,515 @@
+start= Rectangle: Center(0.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+goal= Rectangle: Center(1.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((1,2), (2,2))[W][D], south_obj=Line((1,1), (2,1))[W], west_obj=Line((1,1), (1,2))[W], east_obj=Line((2,1), (2,2))[W][D]
+False
+================
+ Rectangle: Center(0.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None 
+ ACTUAL: Rectangle: Center(0.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, NEIGHBOURS: #N=Rectangle: Center(0.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,1), (1,2))[W]; #S=None; #W=None; #E=Rectangle: Center(1.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((1,1), (2,1))[W], south_obj=None, west_obj=None, east_obj=None; 
+
+cost======== None
+(Rectangle: Center(0.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,1), (1,2))[W], <Direction.NORTH: 1>)
+
+0
+
+cost======== None
+(Rectangle: Center(1.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((1,1), (2,1))[W], south_obj=None, west_obj=None, east_obj=None, <Direction.EAST: 4>)
+
+0
+
+False
+================
+ Rectangle: Center(0.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,1), (1,2))[W] 
+ ACTUAL: Rectangle: Center(0.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,1), (1,2))[W], NEIGHBOURS: #N=Rectangle: Center(0.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,2), (1,3))[W]; #S=Rectangle: Center(0.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; #W=None; #E=Rectangle: Center(1.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((1,2), (2,2))[W][D], south_obj=Line((1,1), (2,1))[W], west_obj=Line((1,1), (1,2))[W], east_obj=Line((2,1), (2,2))[W][D]; 
+
+cost======== None
+(Rectangle: Center(0.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,2), (1,3))[W], <Direction.NORTH: 1>)
+
+0
+
+cost======== None
+(Rectangle: Center(0.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.SOUTH: 2>)
+
+0
+
+cost======== Line((1,1), (1,2))[W]
+(Rectangle: Center(1.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((1,2), (2,2))[W][D], south_obj=Line((1,1), (2,1))[W], west_obj=Line((1,1), (1,2))[W], east_obj=Line((2,1), (2,2))[W][D], <Direction.EAST: 4>)
+
+inf
+
+False
+================
+ Rectangle: Center(1.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((1,1), (2,1))[W], south_obj=None, west_obj=None, east_obj=None 
+ ACTUAL: Rectangle: Center(1.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((1,1), (2,1))[W], south_obj=None, west_obj=None, east_obj=None, NEIGHBOURS: #N=Rectangle: Center(1.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((1,2), (2,2))[W][D], south_obj=Line((1,1), (2,1))[W], west_obj=Line((1,1), (1,2))[W], east_obj=Line((2,1), (2,2))[W][D]; #S=None; #W=Rectangle: Center(0.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; #E=Rectangle: Center(2.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((2,1), (3,1))[W], south_obj=None, west_obj=None, east_obj=None; 
+
+cost======== Line((1,1), (2,1))[W]
+(Rectangle: Center(1.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((1,2), (2,2))[W][D], south_obj=Line((1,1), (2,1))[W], west_obj=Line((1,1), (1,2))[W], east_obj=Line((2,1), (2,2))[W][D], <Direction.NORTH: 1>)
+
+inf
+
+cost======== None
+(Rectangle: Center(0.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.WEST: 3>)
+
+0
+
+cost======== None
+(Rectangle: Center(2.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((2,1), (3,1))[W], south_obj=None, west_obj=None, east_obj=None, <Direction.EAST: 4>)
+
+0
+
+False
+================
+ Rectangle: Center(0.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,2), (1,3))[W] 
+ ACTUAL: Rectangle: Center(0.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,2), (1,3))[W], NEIGHBOURS: #N=Rectangle: Center(0.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,3), (1,4))[W]; #S=Rectangle: Center(0.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,1), (1,2))[W]; #W=None; #E=Rectangle: Center(1.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((1,3), (2,3))[W], south_obj=Line((1,2), (2,2))[W][D], west_obj=Line((1,2), (1,3))[W], east_obj=Line((2,2), (2,3))[W][D]; 
+
+cost======== None
+(Rectangle: Center(0.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,3), (1,4))[W], <Direction.NORTH: 1>)
+
+0
+
+cost======== None
+(Rectangle: Center(0.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,1), (1,2))[W], <Direction.SOUTH: 2>)
+
+0
+
+cost======== Line((1,2), (1,3))[W]
+(Rectangle: Center(1.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((1,3), (2,3))[W], south_obj=Line((1,2), (2,2))[W][D], west_obj=Line((1,2), (1,3))[W], east_obj=Line((2,2), (2,3))[W][D], <Direction.EAST: 4>)
+
+inf
+
+False
+================
+ Rectangle: Center(2.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((2,1), (3,1))[W], south_obj=None, west_obj=None, east_obj=None 
+ ACTUAL: Rectangle: Center(2.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((2,1), (3,1))[W], south_obj=None, west_obj=None, east_obj=None, NEIGHBOURS: #N=Rectangle: Center(2.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((2,2), (3,2))[W], south_obj=Line((2,1), (3,1))[W], west_obj=Line((2,1), (2,2))[W][D], east_obj=Line((3,1), (3,2))[W][D]; #S=None; #W=Rectangle: Center(1.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((1,1), (2,1))[W], south_obj=None, west_obj=None, east_obj=None; #E=Rectangle: Center(3.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((3,1), (4,1))[W], south_obj=None, west_obj=None, east_obj=None; 
+
+cost======== Line((2,1), (3,1))[W]
+(Rectangle: Center(2.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((2,2), (3,2))[W], south_obj=Line((2,1), (3,1))[W], west_obj=Line((2,1), (2,2))[W][D], east_obj=Line((3,1), (3,2))[W][D], <Direction.NORTH: 1>)
+
+inf
+
+cost======== None
+(Rectangle: Center(1.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((1,1), (2,1))[W], south_obj=None, west_obj=None, east_obj=None, <Direction.WEST: 3>)
+
+0
+
+cost======== None
+(Rectangle: Center(3.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((3,1), (4,1))[W], south_obj=None, west_obj=None, east_obj=None, <Direction.EAST: 4>)
+
+0
+
+False
+================
+ Rectangle: Center(0.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,3), (1,4))[W] 
+ ACTUAL: Rectangle: Center(0.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,3), (1,4))[W], NEIGHBOURS: #N=Rectangle: Center(0.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; #S=Rectangle: Center(0.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,2), (1,3))[W]; #W=None; #E=Rectangle: Center(1.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((1,4), (2,4))[W], south_obj=Line((1,3), (2,3))[W], west_obj=Line((1,3), (1,4))[W], east_obj=Line((2,3), (2,4))[W][D]; 
+
+cost======== None
+(Rectangle: Center(0.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.NORTH: 1>)
+
+0
+
+cost======== None
+(Rectangle: Center(0.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,2), (1,3))[W], <Direction.SOUTH: 2>)
+
+0
+
+cost======== Line((1,3), (1,4))[W]
+(Rectangle: Center(1.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((1,4), (2,4))[W], south_obj=Line((1,3), (2,3))[W], west_obj=Line((1,3), (1,4))[W], east_obj=Line((2,3), (2,4))[W][D], <Direction.EAST: 4>)
+
+inf
+
+False
+================
+ Rectangle: Center(3.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((3,1), (4,1))[W], south_obj=None, west_obj=None, east_obj=None 
+ ACTUAL: Rectangle: Center(3.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((3,1), (4,1))[W], south_obj=None, west_obj=None, east_obj=None, NEIGHBOURS: #N=Rectangle: Center(3.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((3,2), (4,2))[W], south_obj=Line((3,1), (4,1))[W], west_obj=Line((3,1), (3,2))[W][D], east_obj=Line((4,1), (4,2))[W]; #S=None; #W=Rectangle: Center(2.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((2,1), (3,1))[W], south_obj=None, west_obj=None, east_obj=None; #E=Rectangle: Center(4.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; 
+
+cost======== Line((3,1), (4,1))[W]
+(Rectangle: Center(3.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((3,2), (4,2))[W], south_obj=Line((3,1), (4,1))[W], west_obj=Line((3,1), (3,2))[W][D], east_obj=Line((4,1), (4,2))[W], <Direction.NORTH: 1>)
+
+inf
+
+cost======== None
+(Rectangle: Center(2.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((2,1), (3,1))[W], south_obj=None, west_obj=None, east_obj=None, <Direction.WEST: 3>)
+
+0
+
+cost======== None
+(Rectangle: Center(4.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.EAST: 4>)
+
+0
+
+False
+================
+ Rectangle: Center(0.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None 
+ ACTUAL: Rectangle: Center(0.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, NEIGHBOURS: #N=Rectangle: Center(0.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; #S=Rectangle: Center(0.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,3), (1,4))[W]; #W=None; #E=Rectangle: Center(1.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((1,4), (2,4))[W], west_obj=None, east_obj=None; 
+
+cost======== None
+(Rectangle: Center(0.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.NORTH: 1>)
+
+0
+
+cost======== None
+(Rectangle: Center(0.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,3), (1,4))[W], <Direction.SOUTH: 2>)
+
+0
+
+cost======== None
+(Rectangle: Center(1.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((1,4), (2,4))[W], west_obj=None, east_obj=None, <Direction.EAST: 4>)
+
+0
+
+False
+================
+ Rectangle: Center(1.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((1,4), (2,4))[W], west_obj=None, east_obj=None 
+ ACTUAL: Rectangle: Center(1.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((1,4), (2,4))[W], west_obj=None, east_obj=None, NEIGHBOURS: #N=Rectangle: Center(1.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; #S=Rectangle: Center(1.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((1,4), (2,4))[W], south_obj=Line((1,3), (2,3))[W], west_obj=Line((1,3), (1,4))[W], east_obj=Line((2,3), (2,4))[W][D]; #W=Rectangle: Center(0.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; #E=Rectangle: Center(2.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((2,4), (3,4))[W], west_obj=None, east_obj=None; 
+
+cost======== None
+(Rectangle: Center(1.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.NORTH: 1>)
+
+0
+
+cost======== Line((1,4), (2,4))[W]
+(Rectangle: Center(1.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((1,4), (2,4))[W], south_obj=Line((1,3), (2,3))[W], west_obj=Line((1,3), (1,4))[W], east_obj=Line((2,3), (2,4))[W][D], <Direction.SOUTH: 2>)
+
+inf
+
+cost======== None
+(Rectangle: Center(0.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.WEST: 3>)
+
+0
+
+cost======== None
+(Rectangle: Center(2.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((2,4), (3,4))[W], west_obj=None, east_obj=None, <Direction.EAST: 4>)
+
+0
+
+False
+================
+ Rectangle: Center(4.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None 
+ ACTUAL: Rectangle: Center(4.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, NEIGHBOURS: #N=Rectangle: Center(4.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,1), (4,2))[W], east_obj=None; #S=None; #W=Rectangle: Center(3.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((3,1), (4,1))[W], south_obj=None, west_obj=None, east_obj=None; #E=Rectangle: Center(5.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; 
+
+cost======== None
+(Rectangle: Center(4.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,1), (4,2))[W], east_obj=None, <Direction.NORTH: 1>)
+
+0
+
+cost======== None
+(Rectangle: Center(3.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((3,1), (4,1))[W], south_obj=None, west_obj=None, east_obj=None, <Direction.WEST: 3>)
+
+0
+
+cost======== None
+(Rectangle: Center(5.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.EAST: 4>)
+
+0
+
+False
+================
+ Rectangle: Center(4.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,1), (4,2))[W], east_obj=None 
+ ACTUAL: Rectangle: Center(4.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,1), (4,2))[W], east_obj=None, NEIGHBOURS: #N=Rectangle: Center(4.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,2), (4,3))[W], east_obj=None; #S=Rectangle: Center(4.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; #W=Rectangle: Center(3.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((3,2), (4,2))[W], south_obj=Line((3,1), (4,1))[W], west_obj=Line((3,1), (3,2))[W][D], east_obj=Line((4,1), (4,2))[W]; #E=Rectangle: Center(5.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; 
+
+cost======== None
+(Rectangle: Center(4.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,2), (4,3))[W], east_obj=None, <Direction.NORTH: 1>)
+
+0
+
+cost======== None
+(Rectangle: Center(4.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.SOUTH: 2>)
+
+0
+
+cost======== Line((4,1), (4,2))[W]
+(Rectangle: Center(3.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((3,2), (4,2))[W], south_obj=Line((3,1), (4,1))[W], west_obj=Line((3,1), (3,2))[W][D], east_obj=Line((4,1), (4,2))[W], <Direction.WEST: 3>)
+
+inf
+
+cost======== None
+(Rectangle: Center(5.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.EAST: 4>)
+
+0
+
+False
+================
+ Rectangle: Center(2.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((2,4), (3,4))[W], west_obj=None, east_obj=None 
+ ACTUAL: Rectangle: Center(2.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((2,4), (3,4))[W], west_obj=None, east_obj=None, NEIGHBOURS: #N=Rectangle: Center(2.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; #S=Rectangle: Center(2.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((2,4), (3,4))[W], south_obj=Line((2,3), (3,3))[W], west_obj=Line((2,3), (2,4))[W][D], east_obj=Line((3,3), (3,4))[W][D]; #W=Rectangle: Center(1.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((1,4), (2,4))[W], west_obj=None, east_obj=None; #E=Rectangle: Center(3.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((3,4), (4,4))[W], west_obj=None, east_obj=None; 
+
+cost======== None
+(Rectangle: Center(2.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.NORTH: 1>)
+
+0
+
+cost======== Line((2,4), (3,4))[W]
+(Rectangle: Center(2.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((2,4), (3,4))[W], south_obj=Line((2,3), (3,3))[W], west_obj=Line((2,3), (2,4))[W][D], east_obj=Line((3,3), (3,4))[W][D], <Direction.SOUTH: 2>)
+
+inf
+
+cost======== None
+(Rectangle: Center(1.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((1,4), (2,4))[W], west_obj=None, east_obj=None, <Direction.WEST: 3>)
+
+0
+
+cost======== None
+(Rectangle: Center(3.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((3,4), (4,4))[W], west_obj=None, east_obj=None, <Direction.EAST: 4>)
+
+0
+
+False
+================
+ Rectangle: Center(4.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,2), (4,3))[W], east_obj=None 
+ ACTUAL: Rectangle: Center(4.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,2), (4,3))[W], east_obj=None, NEIGHBOURS: #N=Rectangle: Center(4.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,3), (4,4))[W][D], east_obj=None; #S=Rectangle: Center(4.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,1), (4,2))[W], east_obj=None; #W=Rectangle: Center(3.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((3,3), (4,3))[W][D], south_obj=Line((3,2), (4,2))[W], west_obj=Line((3,2), (3,3))[W][D], east_obj=Line((4,2), (4,3))[W]; #E=Rectangle: Center(5.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; 
+
+cost======== None
+(Rectangle: Center(4.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,3), (4,4))[W][D], east_obj=None, <Direction.NORTH: 1>)
+
+0
+
+cost======== None
+(Rectangle: Center(4.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,1), (4,2))[W], east_obj=None, <Direction.SOUTH: 2>)
+
+0
+
+cost======== Line((4,2), (4,3))[W]
+(Rectangle: Center(3.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((3,3), (4,3))[W][D], south_obj=Line((3,2), (4,2))[W], west_obj=Line((3,2), (3,3))[W][D], east_obj=Line((4,2), (4,3))[W], <Direction.WEST: 3>)
+
+inf
+
+cost======== None
+(Rectangle: Center(5.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.EAST: 4>)
+
+0
+
+False
+================
+ Rectangle: Center(1.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None 
+ ACTUAL: Rectangle: Center(1.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, NEIGHBOURS: #N=None; #S=Rectangle: Center(1.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((1,4), (2,4))[W], west_obj=None, east_obj=None; #W=Rectangle: Center(0.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; #E=Rectangle: Center(2.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; 
+
+cost======== None
+(Rectangle: Center(1.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((1,4), (2,4))[W], west_obj=None, east_obj=None, <Direction.SOUTH: 2>)
+
+0
+
+cost======== None
+(Rectangle: Center(0.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.WEST: 3>)
+
+0
+
+cost======== None
+(Rectangle: Center(2.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.EAST: 4>)
+
+0
+
+False
+================
+ Rectangle: Center(5.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None 
+ ACTUAL: Rectangle: Center(5.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, NEIGHBOURS: #N=Rectangle: Center(5.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; #S=Rectangle: Center(5.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; #W=Rectangle: Center(4.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,1), (4,2))[W], east_obj=None; #E=None; 
+
+cost======== None
+(Rectangle: Center(5.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.NORTH: 1>)
+
+0
+
+cost======== None
+(Rectangle: Center(5.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.SOUTH: 2>)
+
+0
+
+cost======== None
+(Rectangle: Center(4.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,1), (4,2))[W], east_obj=None, <Direction.WEST: 3>)
+
+0
+
+False
+================
+ Rectangle: Center(0.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None 
+ ACTUAL: Rectangle: Center(0.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, NEIGHBOURS: #N=None; #S=Rectangle: Center(0.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; #W=None; #E=Rectangle: Center(1.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; 
+
+cost======== None
+(Rectangle: Center(0.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.SOUTH: 2>)
+
+0
+
+cost======== None
+(Rectangle: Center(1.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.EAST: 4>)
+
+0
+
+False
+================
+ Rectangle: Center(5.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None 
+ ACTUAL: Rectangle: Center(5.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, NEIGHBOURS: #N=Rectangle: Center(5.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; #S=None; #W=Rectangle: Center(4.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; #E=None; 
+
+cost======== None
+(Rectangle: Center(5.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.NORTH: 1>)
+
+0
+
+cost======== None
+(Rectangle: Center(4.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.WEST: 3>)
+
+0
+
+False
+================
+ Rectangle: Center(3.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((3,4), (4,4))[W], west_obj=None, east_obj=None 
+ ACTUAL: Rectangle: Center(3.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((3,4), (4,4))[W], west_obj=None, east_obj=None, NEIGHBOURS: #N=Rectangle: Center(3.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; #S=Rectangle: Center(3.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((3,4), (4,4))[W], south_obj=Line((3,3), (4,3))[W][D], west_obj=Line((3,3), (3,4))[W][D], east_obj=Line((4,3), (4,4))[W][D]; #W=Rectangle: Center(2.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((2,4), (3,4))[W], west_obj=None, east_obj=None; #E=Rectangle: Center(4.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; 
+
+cost======== None
+(Rectangle: Center(3.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.NORTH: 1>)
+
+0
+
+cost======== Line((3,4), (4,4))[W]
+(Rectangle: Center(3.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((3,4), (4,4))[W], south_obj=Line((3,3), (4,3))[W][D], west_obj=Line((3,3), (3,4))[W][D], east_obj=Line((4,3), (4,4))[W][D], <Direction.SOUTH: 2>)
+
+inf
+
+cost======== None
+(Rectangle: Center(2.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((2,4), (3,4))[W], west_obj=None, east_obj=None, <Direction.WEST: 3>)
+
+0
+
+cost======== None
+(Rectangle: Center(4.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.EAST: 4>)
+
+0
+
+False
+================
+ Rectangle: Center(4.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,3), (4,4))[W][D], east_obj=None 
+ ACTUAL: Rectangle: Center(4.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,3), (4,4))[W][D], east_obj=None, NEIGHBOURS: #N=Rectangle: Center(4.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; #S=Rectangle: Center(4.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,2), (4,3))[W], east_obj=None; #W=Rectangle: Center(3.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((3,4), (4,4))[W], south_obj=Line((3,3), (4,3))[W][D], west_obj=Line((3,3), (3,4))[W][D], east_obj=Line((4,3), (4,4))[W][D]; #E=Rectangle: Center(5.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None; 
+
+cost======== None
+(Rectangle: Center(4.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.NORTH: 1>)
+
+0
+
+cost======== None
+(Rectangle: Center(4.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,2), (4,3))[W], east_obj=None, <Direction.SOUTH: 2>)
+
+0
+
+cost======== Line((4,3), (4,4))[W][D]
+(Rectangle: Center(3.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((3,4), (4,4))[W], south_obj=Line((3,3), (4,3))[W][D], west_obj=Line((3,3), (3,4))[W][D], east_obj=Line((4,3), (4,4))[W][D], <Direction.WEST: 3>)
+
+1
+
+cost======== None
+(Rectangle: Center(5.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None, <Direction.EAST: 4>)
+
+0
+
+False
+================
+ Rectangle: Center(3.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((3,4), (4,4))[W], south_obj=Line((3,3), (4,3))[W][D], west_obj=Line((3,3), (3,4))[W][D], east_obj=Line((4,3), (4,4))[W][D] 
+ ACTUAL: Rectangle: Center(3.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((3,4), (4,4))[W], south_obj=Line((3,3), (4,3))[W][D], west_obj=Line((3,3), (3,4))[W][D], east_obj=Line((4,3), (4,4))[W][D], NEIGHBOURS: #N=Rectangle: Center(3.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((3,4), (4,4))[W], west_obj=None, east_obj=None; #S=Rectangle: Center(3.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((3,3), (4,3))[W][D], south_obj=Line((3,2), (4,2))[W], west_obj=Line((3,2), (3,3))[W][D], east_obj=Line((4,2), (4,3))[W]; #W=Rectangle: Center(2.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((2,4), (3,4))[W], south_obj=Line((2,3), (3,3))[W], west_obj=Line((2,3), (2,4))[W][D], east_obj=Line((3,3), (3,4))[W][D]; #E=Rectangle: Center(4.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,3), (4,4))[W][D], east_obj=None; 
+
+cost======== Line((3,4), (4,4))[W]
+(Rectangle: Center(3.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((3,4), (4,4))[W], west_obj=None, east_obj=None, <Direction.NORTH: 1>)
+
+inf
+
+cost======== Line((3,3), (4,3))[W][D]
+(Rectangle: Center(3.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((3,3), (4,3))[W][D], south_obj=Line((3,2), (4,2))[W], west_obj=Line((3,2), (3,3))[W][D], east_obj=Line((4,2), (4,3))[W], <Direction.SOUTH: 2>)
+
+2
+
+cost======== Line((3,3), (3,4))[W][D]
+(Rectangle: Center(2.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((2,4), (3,4))[W], south_obj=Line((2,3), (3,3))[W], west_obj=Line((2,3), (2,4))[W][D], east_obj=Line((3,3), (3,4))[W][D], <Direction.WEST: 3>)
+
+2
+
+cost======== Line((4,3), (4,4))[W][D]
+(Rectangle: Center(4.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,3), (4,4))[W][D], east_obj=None, <Direction.EAST: 4>)
+
+2
+
+False
+================
+ Rectangle: Center(3.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((3,3), (4,3))[W][D], south_obj=Line((3,2), (4,2))[W], west_obj=Line((3,2), (3,3))[W][D], east_obj=Line((4,2), (4,3))[W] 
+ ACTUAL: Rectangle: Center(3.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((3,3), (4,3))[W][D], south_obj=Line((3,2), (4,2))[W], west_obj=Line((3,2), (3,3))[W][D], east_obj=Line((4,2), (4,3))[W], NEIGHBOURS: #N=Rectangle: Center(3.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((3,4), (4,4))[W], south_obj=Line((3,3), (4,3))[W][D], west_obj=Line((3,3), (3,4))[W][D], east_obj=Line((4,3), (4,4))[W][D]; #S=Rectangle: Center(3.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((3,2), (4,2))[W], south_obj=Line((3,1), (4,1))[W], west_obj=Line((3,1), (3,2))[W][D], east_obj=Line((4,1), (4,2))[W]; #W=Rectangle: Center(2.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((2,3), (3,3))[W], south_obj=Line((2,2), (3,2))[W], west_obj=Line((2,2), (2,3))[W][D], east_obj=Line((3,2), (3,3))[W][D]; #E=Rectangle: Center(4.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,2), (4,3))[W], east_obj=None; 
+
+cost======== Line((3,3), (4,3))[W][D]
+(Rectangle: Center(3.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((3,4), (4,4))[W], south_obj=Line((3,3), (4,3))[W][D], west_obj=Line((3,3), (3,4))[W][D], east_obj=Line((4,3), (4,4))[W][D], <Direction.NORTH: 1>)
+
+3
+
+cost======== Line((3,2), (4,2))[W]
+(Rectangle: Center(3.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((3,2), (4,2))[W], south_obj=Line((3,1), (4,1))[W], west_obj=Line((3,1), (3,2))[W][D], east_obj=Line((4,1), (4,2))[W], <Direction.SOUTH: 2>)
+
+inf
+
+cost======== Line((3,2), (3,3))[W][D]
+(Rectangle: Center(2.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((2,3), (3,3))[W], south_obj=Line((2,2), (3,2))[W], west_obj=Line((2,2), (2,3))[W][D], east_obj=Line((3,2), (3,3))[W][D], <Direction.WEST: 3>)
+
+3
+
+cost======== Line((4,2), (4,3))[W]
+(Rectangle: Center(4.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,2), (4,3))[W], east_obj=None, <Direction.EAST: 4>)
+
+inf
+
+False
+================
+ Rectangle: Center(2.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((2,3), (3,3))[W], south_obj=Line((2,2), (3,2))[W], west_obj=Line((2,2), (2,3))[W][D], east_obj=Line((3,2), (3,3))[W][D] 
+ ACTUAL: Rectangle: Center(2.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((2,3), (3,3))[W], south_obj=Line((2,2), (3,2))[W], west_obj=Line((2,2), (2,3))[W][D], east_obj=Line((3,2), (3,3))[W][D], NEIGHBOURS: #N=Rectangle: Center(2.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((2,4), (3,4))[W], south_obj=Line((2,3), (3,3))[W], west_obj=Line((2,3), (2,4))[W][D], east_obj=Line((3,3), (3,4))[W][D]; #S=Rectangle: Center(2.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((2,2), (3,2))[W], south_obj=Line((2,1), (3,1))[W], west_obj=Line((2,1), (2,2))[W][D], east_obj=Line((3,1), (3,2))[W][D]; #W=Rectangle: Center(1.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((1,3), (2,3))[W], south_obj=Line((1,2), (2,2))[W][D], west_obj=Line((1,2), (1,3))[W], east_obj=Line((2,2), (2,3))[W][D]; #E=Rectangle: Center(3.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((3,3), (4,3))[W][D], south_obj=Line((3,2), (4,2))[W], west_obj=Line((3,2), (3,3))[W][D], east_obj=Line((4,2), (4,3))[W]; 
+
+cost======== Line((2,3), (3,3))[W]
+(Rectangle: Center(2.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((2,4), (3,4))[W], south_obj=Line((2,3), (3,3))[W], west_obj=Line((2,3), (2,4))[W][D], east_obj=Line((3,3), (3,4))[W][D], <Direction.NORTH: 1>)
+
+inf
+
+cost======== Line((2,2), (3,2))[W]
+(Rectangle: Center(2.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((2,2), (3,2))[W], south_obj=Line((2,1), (3,1))[W], west_obj=Line((2,1), (2,2))[W][D], east_obj=Line((3,1), (3,2))[W][D], <Direction.SOUTH: 2>)
+
+inf
+
+cost======== Line((2,2), (2,3))[W][D]
+(Rectangle: Center(1.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((1,3), (2,3))[W], south_obj=Line((1,2), (2,2))[W][D], west_obj=Line((1,2), (1,3))[W], east_obj=Line((2,2), (2,3))[W][D], <Direction.WEST: 3>)
+
+4
+
+cost======== Line((3,2), (3,3))[W][D]
+(Rectangle: Center(3.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((3,3), (4,3))[W][D], south_obj=Line((3,2), (4,2))[W], west_obj=Line((3,2), (3,3))[W][D], east_obj=Line((4,2), (4,3))[W], <Direction.EAST: 4>)
+
+4
+
+False
+================
+ Rectangle: Center(1.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((1,3), (2,3))[W], south_obj=Line((1,2), (2,2))[W][D], west_obj=Line((1,2), (1,3))[W], east_obj=Line((2,2), (2,3))[W][D] 
+ ACTUAL: Rectangle: Center(1.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((1,3), (2,3))[W], south_obj=Line((1,2), (2,2))[W][D], west_obj=Line((1,2), (1,3))[W], east_obj=Line((2,2), (2,3))[W][D], NEIGHBOURS: #N=Rectangle: Center(1.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((1,4), (2,4))[W], south_obj=Line((1,3), (2,3))[W], west_obj=Line((1,3), (1,4))[W], east_obj=Line((2,3), (2,4))[W][D]; #S=Rectangle: Center(1.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((1,2), (2,2))[W][D], south_obj=Line((1,1), (2,1))[W], west_obj=Line((1,1), (1,2))[W], east_obj=Line((2,1), (2,2))[W][D]; #W=Rectangle: Center(0.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,2), (1,3))[W]; #E=Rectangle: Center(2.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((2,3), (3,3))[W], south_obj=Line((2,2), (3,2))[W], west_obj=Line((2,2), (2,3))[W][D], east_obj=Line((3,2), (3,3))[W][D]; 
+
+cost======== Line((1,3), (2,3))[W]
+(Rectangle: Center(1.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((1,4), (2,4))[W], south_obj=Line((1,3), (2,3))[W], west_obj=Line((1,3), (1,4))[W], east_obj=Line((2,3), (2,4))[W][D], <Direction.NORTH: 1>)
+
+inf
+
+cost======== Line((1,2), (2,2))[W][D]
+(Rectangle: Center(1.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((1,2), (2,2))[W][D], south_obj=Line((1,1), (2,1))[W], west_obj=Line((1,1), (1,2))[W], east_obj=Line((2,1), (2,2))[W][D], <Direction.SOUTH: 2>)
+
+5
+
+cost======== Line((1,2), (1,3))[W]
+(Rectangle: Center(0.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,2), (1,3))[W], <Direction.WEST: 3>)
+
+inf
+
+cost======== Line((2,2), (2,3))[W][D]
+(Rectangle: Center(2.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((2,3), (3,3))[W], south_obj=Line((2,2), (3,2))[W], west_obj=Line((2,2), (2,3))[W][D], east_obj=Line((3,2), (3,3))[W][D], <Direction.EAST: 4>)
+
+5
+
+holaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+True
+goal
+True
+13
+Rectangle: Center(1.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((1,2), (2,2))[W][D], south_obj=Line((1,1), (2,1))[W], west_obj=Line((1,1), (1,2))[W], east_obj=Line((2,1), (2,2))[W][D]
+Rectangle: Center(1.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((1,3), (2,3))[W], south_obj=Line((1,2), (2,2))[W][D], west_obj=Line((1,2), (1,3))[W], east_obj=Line((2,2), (2,3))[W][D]
+Rectangle: Center(2.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((2,3), (3,3))[W], south_obj=Line((2,2), (3,2))[W], west_obj=Line((2,2), (2,3))[W][D], east_obj=Line((3,2), (3,3))[W][D]
+Rectangle: Center(3.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((3,3), (4,3))[W][D], south_obj=Line((3,2), (4,2))[W], west_obj=Line((3,2), (3,3))[W][D], east_obj=Line((4,2), (4,3))[W]
+Rectangle: Center(3.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((3,4), (4,4))[W], south_obj=Line((3,3), (4,3))[W][D], west_obj=Line((3,3), (3,4))[W][D], east_obj=Line((4,3), (4,4))[W][D]
+Rectangle: Center(4.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,3), (4,4))[W][D], east_obj=None
+Rectangle: Center(4.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,2), (4,3))[W], east_obj=None
+Rectangle: Center(4.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,1), (4,2))[W], east_obj=None
+Rectangle: Center(4.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(3.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((3,1), (4,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(2.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((2,1), (3,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(1.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((1,1), (2,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(0.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None

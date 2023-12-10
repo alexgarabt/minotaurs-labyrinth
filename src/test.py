@@ -265,14 +265,14 @@ def main_test():
     """
     
     doors = []
-    doors.append(Door(Point(2,1),Point(2,2)))
-    doors.append(Door(Point(2,2),Point(2,3)))
-    doors.append(Door(Point(2,3),Point(2,4)))
-    doors.append(Door(Point(3,1),Point(3,2)))
-    doors.append(Door(Point(3,2),Point(3,3)))
-    doors.append(Door(Point(3,3),Point(3,4)))
     doors.append(Door(Point(1,2),Point(2,2)))
+    doors.append(Door(Point(2,1),Point(2,2)))
+    doors.append(Door(Point(3,1),Point(3,2)))
+    doors.append(Door(Point(2,2),Point(2,3)))
+    doors.append(Door(Point(3,2),Point(3,3)))
     doors.append(Door(Point(3,3),Point(4,3)))
+    doors.append(Door(Point(2,3),Point(2,4)))
+    doors.append(Door(Point(3,3),Point(3,4)))
     doors.append(Door(Point(4,3),Point(4,4)))
 
     walls = []
@@ -285,10 +285,11 @@ def main_test():
     walls.append(Wall(Point(1,2), Point(4,2)))
     walls.append(Wall(Point(1,3), Point(4,3)))
     walls.append(Wall(Point(1,4), Point(4,4)))
-    
 
+    
     l = Labyrinth(Point(1.5, 1.7), walls, doors)
-    l.get_path_teseo_minotaurs()
+    l.print_path_teseo_to_minotaurs()
+    l.print_solution()
 
     
 if __name__ == '__main__':
