@@ -6,15 +6,20 @@ import math
 
 class Labyrinth:
     """
-    Minotaurs Labyrinth representation, the labyrinth is made of Walls and Doors, 
-    the walls aren't passables and the doors are.
+    Minotaurs Labyrinth representation, the labyrinth is made of Walls, Doors and empty cells, 
+    the walls aren't passables and the doors but have a cost.
 
     The labyrinth contains the minotaurs that is defined by his position and 
     we have Teseo that is also defined by his position.
 
-    The dimensions of the labyrinth are inside [MIN_COORD, MAX_COORD] for X and Y plane
+    The dimensions of the labyrinth are inside [MIN_COORD, MAX_COORD] for X and Y plane.
+    Should be always positive!!!
 
-    Teseo Position is in the origin of the coordenates in the postion TESEO
+    Teseo Position is in the origin of the coordenates in the postion TESEO.
+
+    The Labyrinth is represented as a cells, a node structure of nodes of the cells of (1u) area,
+    So the bigger is the map area of the labyrinth the bigger will be the spatial complexity
+    SPATIAL COMPLEXITY: O(MAX_COORD^2)
 
     Atributtes:
         minotaurs : Point
@@ -30,25 +35,52 @@ class Labyrinth:
         _graph_dictionary: dict[CellNode : GridCellGraph]
             Dictionary that contains all the graph structure, 
             each node is associated to its graph structure as pair (key:value)
+        MIN_COORD: int
+            Represents the min coordenate in the labyrinth map
+        MAX_COORD: int
+            Represents the max coordenate in the labyrinth map,
+            The bigger the max the bigger the O(MAX_COORD^2) spatial complexity
+        LABYRINTH_COORDS: range
+            Contains all the integer coordenates possible in the labyrinth map
+        CELL_AREA: int
+            Area of the cells in the labyrinth, 1 (unit^2), area of sectors, 
+            the min area of a cell in the labyrinth map.
+        TESEO: Point
+            The position of theseo in the labyrinth map
+        DOOR_COST: int
+            Cost of pass through a door to a another cell in the labyrinth
+            To avoid that heuristic gives better than cross a door the policy is:
+            - Pass through a door should cost the same that the max distance possible in the labyrinth
+        WALL_COST: int
+            Cost of pass through a wall to a another cell in the labyrinth
+        EMPTY_COST: int
+            Cost of pass through a empty cell to another cell in the labyrinth
     """
     MIN_COORD = 0
-    MAX_COORD = 10 #min is 6 #300
-
-    LABYRINTH_COORDS = range(MIN_COORD, MAX_COORD) # coordenates for x and y
+                   
     CELL_AREA = 1 # 1 (unit^2), area of sectors, the min area of a cell in the labyrinth map
+
     # Cost of the labyrinth_objects
-    DOOR_COST = 1
+    DOOR_COST = 1000 #should be big, because if not the heuristic could defeat it
     WALL_COST = float('inf')
     EMPTY_COST = 0
-    TESEO = Point(0,0)
 
-    def __init__(self, minotaurs: Point = Point(0,0), walls: 'list[Wall]' = [], doors: 'list[Door]' = []):
+
+    def __init__(self, minotaurs: Point = Point(0,0), 
+                 teseo: Point = Point(0,0),
+                 walls: 'list[Wall]' = [], 
+                 doors: 'list[Door]' = [], 
+                 max_area: int = 100):
         """
         Initializes the Labyrinth with the provided data
 
         Args:
             minotaurs : Point
                 The position of the minotaurs
+            teseo: Point
+                Positon of teseo in the labyrinth
+            max_area: int
+                Max coordenate of the labyrinth
             walls : 'list[Wall]'
                 List with the walls of the labyrinth
             doors: 'list[Door]'
@@ -57,7 +89,13 @@ class Labyrinth:
         self.minotaurs = minotaurs
         self._walls = walls
         self._doors = doors
-        self.teseo = self.TESEO   # Teseo is in the origin Postion
+        self.teseo = teseo   # Teseo is in the origin Postion
+        self.MAX_COORD = max_area
+
+        # To avoid problems with the heuristic the cost is as big as the max distance
+        self.DOOR_COST = max_area 
+
+        self.LABYRINTH_COORDS = range(self.MIN_COORD, self.MAX_COORD)
         
 
         # Create the structure of the labyrinth without the labyrinth objects
@@ -290,7 +328,7 @@ class Labyrinth:
 
         # Normal case the point is only inside of a node
         else:
-            result.append(self._labyrinth_nodes[floor_x][floor_y])
+            result.append(self._labyrinth_nodes[floor_y][floor_x])
         
         result = list(filter(lambda x: x is not None, result))
         return result
@@ -362,6 +400,9 @@ class Labyrinth:
         self._add_labyrinth_doors(doors)
 
     def eliminate_labyrinth_objs(self):
+        """
+        Eleminate all the walls and doors in the labyrinth
+        """
         #iterate throuth the keys that are the nodes
         for node in self._graph_dictionary:
             #node: CellNode
@@ -385,7 +426,7 @@ class Labyrinth:
         Heuristic uses the manhattan distance between the center of nodes
         """
         return node.manhattan_distance(goal.cell.center)
-    
+        
     def A_STAR_SEARCH(self, start: CellNode, goal: CellNode):
         """
         A* algorithm of heuristic search for graphs
@@ -483,6 +524,8 @@ class Labyrinth:
                 number of doors used in the path"""
          
         path = []
+        number_of_doors_used = 0
+
         teseo_node: CellNode = self.get_node_contains(self.teseo)[0]
         minotaurs_node: CellNode = self.get_node_contains(self.minotaurs)[0]
 
@@ -495,12 +538,12 @@ class Labyrinth:
         is_possible = list_search[0]
         came_from = list_search[1]
         costs = list_search[2]
-        number_of_doors_used = costs[minotaurs_node]
+        
 
         if is_possible:
-            
             path = self._reconstruct_path(came_from, minotaurs_node)[::-1]
-            
+            # Numbers of doors used is defined by the cost* n times
+            number_of_doors_used = int( costs[minotaurs_node]/ self.DOOR_COST )
 
         return is_possible, path, number_of_doors_used
     
@@ -515,15 +558,16 @@ class Labyrinth:
 
         print("---------------------------------------")
         print("Is possible to resolve?:", is_possible)
+        print("Number of doors used:", number_of_doors_used)
+        print("Number of cells used:", len(path))
+        print("---------------------------------------")
+        print("\nPath:")
         if is_possible:
-            print("Number of doors used:", number_of_doors_used)
-            print("Number of cells used:", len(path))
-            print("---------------------------------------")
-            print("\nPath:")
             for i in path:
                 print(i)
+            
 
-    def _get_labyrinth_matrix(self, list_nodes:'list[CellNode]' =[]) -> 'list[list[str]]':
+    def _get_labyrinth_matrix_no_info(self, list_nodes:'list[CellNode]' =[]) -> 'list[list[str]]':
         """
         Return a basic matrix with the labyrinth representated
         
@@ -537,37 +581,104 @@ class Labyrinth:
         for i in reverse:
             sub = []
             j: CellNode
+
             for j in i:
+                j: CellNode
+                #check middle
                 if j.contains(self.teseo) and j.contains(self.minotaurs):
-                    sub.append("|T/M|")
+                    middle = "[T/M]"
                 elif j.contains(self.teseo):
-                    sub.append("|T|")
+                    middle = "[T]"
                 elif j.contains(self.minotaurs):
-                    sub.append("|M|")
+                    middle = "[M]"
                 elif j in list_nodes:
-                    sub.append("|#|")
+                    middle = "[#]"
                 else: 
-                    sub.append("| |")
+                    middle = "[ ]"
+
+                sub.append(middle)
+            result.append(sub)
+        return result
+
+    def _get_labyrinth_matrix_info(self, list_nodes:'list[CellNode]' =[]) -> 'list[list[str]]':
+        """
+        Return a basic matrix with the labyrinth representated
+        
+        No doors or walls are represented.
+        Teseo is represented as T
+        Minotaurs is represented as M
+        Provided nodes are represented as #
+        """
+        result = []
+        reverse = self._labyrinth_nodes[::-1]
+        for i in reverse:
+            sub = []
+            j: CellNode
+
+            for j in i:
+                j: CellNode
+                #check middle
+                middle:str =" "
+                left:str= " "
+                right:str= " "
+
+                if j in list_nodes: 
+                    sub.append("[ # ]")
+                    continue
+
+                if isinstance(j.north_obj, Wall) and not(isinstance(j.north_obj, Door)):
+                    if isinstance(j.south_obj, Wall) and not(isinstance(j.south_obj, Door)):
+                        middle = "="
+                    else:
+                        middle = "\u203E"
+                elif isinstance(j.south_obj, Wall) and not(isinstance(j.south_obj, Door)):
+                    middle = "_"
+                
+                if isinstance(j.west_obj, Wall) and not(isinstance(j.west_obj, Door)):
+                    left = "|"
+                if isinstance(j.east_obj, Wall) and not(isinstance(j.east_obj, Door)):
+                    right = "|"
+
+                sub.append("["+left + middle + right+"]")
             result.append(sub)
         return result
     
-    def _print_labyrith(self, list_nodes:'list[CellNode]' =[]):
+    def _print_labyrith(self, list_nodes:'list[CellNode]' =[], use_info:bool= False):
         """
         Prints in the standar output the labyrinth
         Usefull for small labyrinths
         """
-        martix = self._get_labyrinth_matrix(list_nodes)
-        for list in martix:
-            for i in list:
-                print(i, end="")
-            print()
+        if use_info:
+            martix = self._get_labyrinth_matrix_info(list_nodes)
+            for list in martix:
+                for i in list:
+                    print(i, end="")
+                print()
+        else:
+            martix = self._get_labyrinth_matrix_no_info(list_nodes)
+            for list in martix:
+                for i in list:
+                    print(i, end="")
+                print()
+        
 
-    def print_solution(self):
+    def print_solution(self, use_info:bool = False):
         """Print in the standard output a graphic basic resolution of the labyrinth"""
-        print("\nLabyrinth:")
-        self._print_labyrith()
-        print("\nSolution:")
-        self._print_labyrith(self.teseo_to_minotaurs()[1])   
+
+        
+        if use_info: 
+            print("\nLabyrinth:")  
+            self._print_labyrith(use_info=True)
+
+            print("\nSolution:")
+            self._print_labyrith(self.teseo_to_minotaurs()[1], use_info=True)
+        else:
+            print("\nLabyrinth:")  
+            self._print_labyrith()
+
+            print("\nSolution:")
+            self._print_labyrith(self.teseo_to_minotaurs()[1])
+           
 
         
 

@@ -61,8 +61,15 @@ class Wall(FiniteLine):
                 result.append(Wall(f_point, s_point))
         
         return result
+    
+    def is_a_door(self):
+        return False
+    
     def __repr__(self) -> str:
         return super().__repr__() + "[W]"
+    
+    def get_str(self) -> str:
+        return "walls.append(Wall(Point"+self.edge1.__repr__()+", Point"+self.edge2.__repr__()+"))"
 
 class Door(Wall):
     """
@@ -80,8 +87,14 @@ class Door(Wall):
         if self.length != self.DOOR_LENGTH:
             raise ValueError("Error: distance between points should be 1")
     
+    def is_a_door(self):
+        return False
+    
     def __repr__(self) -> str:
         return super().__repr__() + "[D]"
+    
+    def get_str(self) -> str:
+        return "doors.append(Door(Point"+self.edge1.__repr__()+", Point"+self.edge2.__repr__()+"))"
 
 
 
