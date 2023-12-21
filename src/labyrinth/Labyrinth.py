@@ -94,6 +94,7 @@ class Labyrinth:
 
         # To avoid problems with the heuristic the cost is as big as the max distance
         self.DOOR_COST = max_area 
+       
 
         self.LABYRINTH_COORDS = range(self.MIN_COORD, self.MAX_COORD)
         
@@ -398,6 +399,8 @@ class Labyrinth:
         # Second the doors, to overwrite the walls in the same cell
         self._add_labyrinth_walls(walls)
         self._add_labyrinth_doors(doors)
+        self._walls.extend(walls)
+        self._doors.extend(doors)
 
     def eliminate_labyrinth_objs(self):
         """
@@ -410,6 +413,8 @@ class Labyrinth:
             node.south_obj = None
             node.west_obj = None
             node.east_obj = None
+        self._walls = []
+        self._doors = []
 
     def _cost(self, node: CellNode, direction: Direction) -> float:
         """
@@ -430,7 +435,11 @@ class Labyrinth:
     def A_STAR_SEARCH(self, start: CellNode, goal: CellNode):
         """
         A* algorithm of heuristic search for graphs
-        For fiding the minimum path between two nodes
+        For fiding the minimum path with min number of doors between two nodes
+
+        f(n) = g(n) + h(n)
+        g(n) = cost of (n) node is the cost from the (start) node to (n) node.
+        h(n) = heuristic cost, is manhattan distance between centers of nodes.
         
         Args:
             start: CellNode
@@ -439,9 +448,7 @@ class Labyrinth:
                 Goal node to reach from the start node
 
         """
-        # f(n) = g(n) + h(n)
-        # g(n) = cost of (n) node is the cost from the (start) node to (n) node.
-        # h(n) = heuristic cost, is manhattan distance between centers of nodes.
+        # 
 
         frontier = PriorityQueue() # Initialize the priority queue
         frontier.put(start, 0)     # Put the start node in the queue
