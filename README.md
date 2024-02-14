@@ -76,4 +76,4 @@ See full `src/labyrinth/Labyrinth.py` for more context
 
 ### Path reconstruction
 Each node it is stored in a dictionary `came_from[actual_node] = parent_node`
-So reconstructing the path is a recursive operation from 'came_from[goal_node] = parent' and so until reach the `initial_node`
+So reconstructing the path is a recursive operation from `came_from[goal_node] = parent` and so until reach the `initial_node`
