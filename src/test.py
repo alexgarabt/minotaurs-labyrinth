@@ -286,8 +286,8 @@ class TestLabyrinth(unittest.TestCase):
         number_of_nodes_used = len(path)
         number_of_doors_used = list_result[2]
 
-        labyrinth.print_path_teseo_to_minotaurs()
-        labyrinth.print_solution(use_info=True)
+        #labyrinth.print_path_teseo_to_minotaurs()
+        #labyrinth.print_solution(use_info=True)
 
         self.assertTrue(is_possible)               # Check that is possible to resolve the labyrinth
         self.assertEqual(number_of_doors_used, 5)  # The min path uses 5 doors

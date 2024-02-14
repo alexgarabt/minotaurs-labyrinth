@@ -4,7 +4,7 @@ A project for solve minimal path between Teseo and Minotaurs.
 - Each cell can have in the edge a Wall(dosent allow to pass to the adjacent cell) or a Door(let pass to the adjacent cell) or Nothing between the cells.
 - The minimal path is defined as the path that uses the less number of doors and less number of cell to reach the minotaurs from the position of Teseo
 - Teseo and the Minotaur will be considered points in a cell
-
+![solving labyrinth 1](img/example_labyrinth1.png)
 ## Structure
 Project is divided in set of tools for 2 dimension manage, a node, a graph of nodes representing the labyrinth and the `algorithm of search A*`. 
 
