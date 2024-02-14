@@ -49,6 +49,7 @@ The test porpuse is to check that the different operations in 2 dimensions of th
 A* search algorithm is a graph traversal and pathfinding algorithm, is a BFS algorithm that uses heuristic to determine better which next node to select, selecting the node with less cost in the queue. [see wikipedia](https://en.wikipedia.org/wiki/A*_search_algorithm)
 
 In terms of performace is one of the best   
+
     * worst case performance: **O(|E| log(|V|)) = O(b^d)**
     * worst case space complexity: **O(|V|) = O(b^d)**
 
