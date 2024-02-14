@@ -62,9 +62,9 @@ The cost function is `f(n) = g(n) + h(n)`.
     * h(n) = heuristic cost, here is used manhattan distance beteween center of nodes.
     
 
-To get the **optimal** solution the h(n) function must be admissible ( if it never overestimates the cost of reaching the goal ).
+To get the **optimal** solution the h(n) function must be admissible ( if it never overestimates the cost of reaching the goal ).  
 Manhattan distance is (m(p1, p2) = |x1 - x2| + |y1 - y2|) and is admissible.  
-If h(n)=0 for all (node) then A* is Dijkstra's algorithm.
+If h(n)=0 for all (node) then A* is Dijkstra's algorithm.  
 
 g(n) is constructed by getting the depth of the parent neightbour node form it came the actual node (using a dictionary cost_so_far[node] = cost_so_far[parent node] + 1), g(n) includes the cost of pass through doors.
 
@@ -74,3 +74,6 @@ Minimal path now is defined as the path that uses the min number of doors(first)
 See full `src/labyrinth/Labyrinth.py` for more context  
 ![Implementation of the algorithm](img/a_star_impl.png "Implementation of the algorithm")
 
+### Path reconstruction
+Each node it is stored in a dictionary `came_from[actual_node] = parent_node`
+So reconstructing the path is a recursive operation from 'came_from[goal_node] = parent' and so until reach the `initial_node`
