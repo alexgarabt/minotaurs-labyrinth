@@ -4,7 +4,7 @@ A project for solve minimal path between Teseo and Minotaurs.
 - Each cell can have in the edge a Wall(dosent allow to pass to the adjacent cell) or a Door(let pass to the adjacent cell) or Nothing between the cells.
 - The minimal path is defined as the path that uses the less number of doors and less number of cell to reach the minotaurs from the position of Teseo
 - Teseo and the Minotaur will be considered points in a cell
-![solving labyrinth 1](img/example_labyrinth1.png)
+![solving labyrinth 1](img/example_labyrinth1.png "Example of solving labyrinth 1 ")
 ## Structure
 Project is divided in set of tools for 2 dimension manage, a node, a graph of nodes representing the labyrinth and the `algorithm of search A*`. 
 
@@ -47,9 +47,11 @@ The test porpuse is to check that the different operations in 2 dimensions of th
 
 ## A* (A STAR) search algorithm
 A* search algorithm is a graph traversal and pathfinding algorithm, is a BFS algorithm that uses heuristic to determine better which next node to select, selecting the node with less cost in the queue. [see wikipedia](https://en.wikipedia.org/wiki/A*_search_algorithm)
-In terms of performace is one of the best 
+
+In terms of performace is one of the best   
     * worst case performance: **O(|E| log(|V|)) = O(b^d)**
     * worst case space complexity: **O(|V|) = O(b^d)**
+
 Where (E is the number of number of edges), (V is the number of vertices), (b is the branching factor) & (d is the depth).
 ("A_STAR_SEARCH() in src/labyrinth/Labyrinth.py")
 
@@ -67,3 +69,8 @@ If h(n)=0 for all (node) then A* is Dijkstra's algorithm.
 g(n) is constructed by getting the depth of the parent neightbour node form it came the actual node (using a dictionary cost_so_far[node] = cost_so_far[parent node] + 1), g(n) includes the cost of pass through doors.
 
 Minimal path now is defined as the path that uses the min number of doors(first) and cells(second). So to avoid problems with getting earlier to the solution by a path with a door than a large path of cells without doors the solution is (cost of pass through a door in a cell = maximum distance in the labyrinth). 
+
+### Implementation 
+See full `src/labyrinth/Labyrinth.py` for more context  
+![Implementation of the algorithm](img/a_star_impl.png "Implementation of the algorithm")
+
