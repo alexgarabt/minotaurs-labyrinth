@@ -286,8 +286,8 @@ class TestLabyrinth(unittest.TestCase):
         number_of_nodes_used = len(path)
         number_of_doors_used = list_result[2]
 
-        #labyrinth.print_path_teseo_to_minotaurs()
-        #labyrinth.print_solution(use_info=True)
+        labyrinth.print_path_teseo_to_minotaurs()
+        labyrinth.print_solution(use_info=True)
 
         self.assertTrue(is_possible)               # Check that is possible to resolve the labyrinth
         self.assertEqual(number_of_doors_used, 5)  # The min path uses 5 doors
@@ -317,8 +317,8 @@ class TestLabyrinth(unittest.TestCase):
         #labyrinth.print_solution()
 
         self.assertFalse(is_possible)              # Check that is not possible to resolve the labyrinth
-        self.assertEqual(number_of_doors_used, 0) # The min path uses 5 doors
-        self.assertEqual(number_of_nodes_used, 0) # The min path uses 13 nodes
+        self.assertEqual(number_of_doors_used, 0) 
+        self.assertEqual(number_of_nodes_used, 0)
 
     def test_search_labyrinth_3(self):
         
@@ -394,7 +394,7 @@ class TestLabyrinth(unittest.TestCase):
         #labyrinth.print_path_teseo_to_minotaurs()
         #labyrinth.print_solution()
 
-        self.assertTrue(is_possible)              # Check that is not possible to resolve the labyrinth
+        self.assertTrue(is_possible)              
         self.assertEqual(number_of_doors_used, 2)  # The min path uses doors
         self.assertEqual(number_of_nodes_used, 14) # The min path uses  nodes
 
@@ -481,9 +481,9 @@ class TestLabyrinth(unittest.TestCase):
         #labyrinth.print_path_teseo_to_minotaurs()
         #labyrinth.print_solution()
 
-        self.assertTrue(is_possible)              # Check that is not possible to resolve the labyrinth
-        self.assertEqual(number_of_doors_used, 0)  # The min path uses doors
-        self.assertEqual(number_of_nodes_used, 36) # The min path uses  nodes
+        self.assertTrue(is_possible)              # Check that is  possible to resolve the labyrinth
+        self.assertEqual(number_of_doors_used, 9)  # The min path uses doors
+        self.assertEqual(number_of_nodes_used, 16) # The min path uses  nodes
 
     
 if __name__ == '__main__':
