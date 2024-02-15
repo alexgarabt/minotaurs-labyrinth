@@ -150,3 +150,5 @@ example:
 -1 -1
 ```
 
+## Other
+All the code is documented with comments & pydoc.
