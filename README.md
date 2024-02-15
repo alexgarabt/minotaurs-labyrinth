@@ -12,7 +12,7 @@ Main programm is the file `src/Main.py` it reads from `data_files/input.txt` the
 
 The programm reads from `input.txt` the different labyrinth and make all the necessary objects and initializate the labyrinth and print the solution (from teseo to minoturs)  
  
-![main program working](img/main.png "example of use Main.py)
+![main program working](img/main.png "example of use Main.py")
 
 
 ## Structure
