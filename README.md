@@ -104,8 +104,12 @@ def _reconstruct_path(self, came_from: dict, current_node: CellNode) -> 'list[Ce
 ```
 
 ### How to reach one point to other with minimal path
-Example is `teseo_to_minotaurs()` in 'src/labyrinth/Labyrinth.py`  
+Example is `teseo_to_minotaurs()` in `src/labyrinth/Labyrinth.py`  
 
 - First get the cell that contains each point with `self.get_node_contains(self.teseo)` (is a list because a point could be in 4 cells in the edge) 
 - Second check the nodes are not null.
-- Third call `self.A_STAR_SEARCH(init_node, goal_node)` <- return a lis
+- Third call `self.A_STAR_SEARCH(init_node, goal_node)` <- return a list with information.
+- Fourth with the given information: 
+    * Check if exist a path
+    * Reconstruct the path
+    * The number of door used is the `cost[goal_node] / self.DOOR_COST)` 
