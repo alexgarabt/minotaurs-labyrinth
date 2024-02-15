@@ -112,4 +112,29 @@ Example is `teseo_to_minotaurs()` in `src/labyrinth/Labyrinth.py`
 - Fourth with the given information: 
     * Check if exist a path
     * Reconstruct the path
-    * The number of door used is the `cost[goal_node] / self.DOOR_COST)` 
+    * The number of door used is the `cost[goal_node] / self.DOOR_COST)`
+
+### Examples of solutions
+In file `src/test.py` there is four 4 examples of labyrinth inside class `TestLabyrinth`
+- `test_search_labyrinth_1()` it is the labyrinth shown in the first image.
+- `test_search_labyrinth_2_no_solution()` its a labyrinth with no path between teseo and the minotaurs.
+- `test_search_labyrinth_3()` its a bigger labyrinth with solution in 14 nodes path
+- `test_search_labyrinth_4()` a big labyrinth too, min path with 16 nodes
+
+There are more example of labyrinths in the file `data_files/input.txt` the labyrinths in that file are constructed as 
+    1- First a line with "M N" (M is the number of walls) & (N is the number of doors).
+    2- Followed with "M" lines of walls, the the syntaxis "X Y D T" where ( (X,Y) is the left bottom point of the wall, D represents to wich axis is parallel the door (0 is X & 1 is Y) & last T is the length of the wall).
+    3- Followed with "N" lines of doors, the syntaxis is "X Y D" like the walls but the doors are only lenght 1.
+    4- Last line is "F1 F2" where (F1, F2) point is the point of the minotaurs in the labyrinth.
+    5- If after last line is "-1 -1", then there is no more labyrinths and EOF, but if not then there is other one.
+
+example:
+```
+4 0
+1 1 0 1
+1 1 1 1
+2 1 1 1
+1 2 0 1
+1.5 1.7
+8 9
+```
