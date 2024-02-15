@@ -5,6 +5,14 @@ A project for solve minimal path between Teseo and Minotaurs.
 - The minimal path is defined as the path that uses the less number of doors and less number of cell to reach the minotaurs from the position of Teseo
 - Teseo and the Minotaur will be considered points in a cell
 ![solving labyrinth 1](img/example_labyrinth1.png "Example of solving labyrinth 1 ")
+
+
+## Main program
+Main programm is the file `src/Main.py` it reads from `data_files/input.txt` the labyrinths (this labyrinths are not bigger that constan defined in Main.py **MAX_AREA**). Teseo is always supposed in point(0,0) TESEO constant.  
+
+The programm reads from `input.txt` the different labyrinth and make all the necessary objects and initializate the labyrinth and print the solution (from teseo to minoturs)
+![main program working](img/main.png "example of use Main.py)
+
 ## Structure
 Project is divided in set of tools for 2 dimension manage, a node, a graph of nodes representing the labyrinth and the `algorithm of search A*`. 
 
@@ -121,6 +129,7 @@ In file `src/test.py` there is four 4 examples of labyrinth inside class `TestLa
 - `test_search_labyrinth_3()` its a bigger labyrinth with solution in 14 nodes path
 - `test_search_labyrinth_4()` a big labyrinth too, min path with 16 nodes
 
+### Labyrinth in input.txt
 There are more example of labyrinths in the file `data_files/input.txt` the labyrinths in that file are constructed as 
     1- First a line with "M N" (M is the number of walls) & (N is the number of doors).
     2- Followed with "M" lines of walls, the the syntaxis "X Y D T" where ( (X,Y) is the left bottom point of the wall, D represents to wich axis is parallel the door (0 is X & 1 is Y) & last T is the length of the wall).
@@ -138,3 +147,4 @@ example:
 1.5 1.7
 -1 -1
 ```
+
