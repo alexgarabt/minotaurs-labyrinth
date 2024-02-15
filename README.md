@@ -10,8 +10,10 @@ A project for solve minimal path between Teseo and Minotaurs.
 ## Main program
 Main programm is the file `src/Main.py` it reads from `data_files/input.txt` the labyrinths (this labyrinths are not bigger that constan defined in Main.py **MAX_AREA**). Teseo is always supposed in point(0,0) TESEO constant.  
 
-The programm reads from `input.txt` the different labyrinth and make all the necessary objects and initializate the labyrinth and print the solution (from teseo to minoturs)
+The programm reads from `input.txt` the different labyrinth and make all the necessary objects and initializate the labyrinth and print the solution (from teseo to minoturs)  
+ 
 ![main program working](img/main.png "example of use Main.py)
+
 
 ## Structure
 Project is divided in set of tools for 2 dimension manage, a node, a graph of nodes representing the labyrinth and the `algorithm of search A*`. 
