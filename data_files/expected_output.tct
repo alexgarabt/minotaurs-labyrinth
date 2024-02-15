@@ -1,0 +1,394 @@
+---------------------------------------
+Is possible to resolve?: False
+Number of doors used: 0
+Number of cells used: 0
+---------------------------------------
+
+Path:
+---------------------------------------
+Is possible to resolve?: True
+Number of doors used: 5
+Number of cells used: 13
+---------------------------------------
+
+Path:
+Rectangle: Center(0.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(1.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((1,1), (2,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(2.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((2,1), (3,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(3.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((3,1), (4,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(4.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(4.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,1), (4,2))[W], east_obj=None
+Rectangle: Center(4.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,2), (4,3))[W], east_obj=None
+Rectangle: Center(4.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,3), (4,4))[W][D], east_obj=None
+Rectangle: Center(3.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((3,4), (4,4))[W], south_obj=Line((3,3), (4,3))[W][D], west_obj=Line((3,3), (3,4))[W][D], east_obj=Line((4,3), (4,4))[W][D]
+Rectangle: Center(3.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((3,3), (4,3))[W][D], south_obj=Line((3,2), (4,2))[W], west_obj=Line((3,2), (3,3))[W][D], east_obj=Line((4,2), (4,3))[W]
+Rectangle: Center(2.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((2,3), (3,3))[W], south_obj=Line((2,2), (3,2))[W], west_obj=Line((2,2), (2,3))[W][D], east_obj=Line((3,2), (3,3))[W][D]
+Rectangle: Center(1.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((1,3), (2,3))[W], south_obj=Line((1,2), (2,2))[W][D], west_obj=Line((1,2), (1,3))[W], east_obj=Line((2,2), (2,3))[W][D]
+Rectangle: Center(1.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((1,2), (2,2))[W][D], south_obj=Line((1,1), (2,1))[W], west_obj=Line((1,1), (1,2))[W], east_obj=Line((2,1), (2,2))[W][D]
+---------------------------------------
+Is possible to resolve?: True
+Number of doors used: 2
+Number of cells used: 14
+---------------------------------------
+
+Path:
+Rectangle: Center(0.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(0.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,1), (1,2))[W]
+Rectangle: Center(0.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,2), (1,3))[W]
+Rectangle: Center(0.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,3), (1,4))[W]
+Rectangle: Center(0.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,4), (1,5))[W]
+Rectangle: Center(0.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,5), (1,6))[W][D]
+Rectangle: Center(0.5,6.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,6), (1,7))[W]
+Rectangle: Center(0.5,7.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,7), (1,8))[W]
+Rectangle: Center(0.5,8.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(1.5,8.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((1,8), (2,8))[W], west_obj=None, east_obj=None
+Rectangle: Center(2.5,8.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((2,8), (3,8))[W], west_obj=None, east_obj=None
+Rectangle: Center(3.5,8.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((3,8), (4,8))[W][D], west_obj=None, east_obj=None
+Rectangle: Center(3.5,7.5), Height: 1.0, Width: 1.0, north_obj=Line((3,8), (4,8))[W][D], south_obj=Line((3,7), (4,7))[W], west_obj=Line((3,7), (3,8))[W][D], east_obj=Line((4,7), (4,8))[W]
+Rectangle: Center(2.5,7.5), Height: 1.0, Width: 1.0, north_obj=Line((2,8), (3,8))[W], south_obj=Line((2,7), (3,7))[W][D], west_obj=None, east_obj=Line((3,7), (3,8))[W][D]
+---------------------------------------
+Is possible to resolve?: True
+Number of doors used: 0
+Number of cells used: 36
+---------------------------------------
+
+Path:
+Rectangle: Center(0.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(1.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((1,1), (2,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(2.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((2,1), (3,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(3.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((3,1), (4,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(4.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((4,1), (5,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(5.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(6.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(7.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((7,1), (8,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(8.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((8,1), (9,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(9.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(9.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((9,1), (9,2))[W], east_obj=None
+Rectangle: Center(9.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((9,2), (9,3))[W], east_obj=None
+Rectangle: Center(9.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((9,3), (9,4))[W], east_obj=None
+Rectangle: Center(9.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((9,4), (9,5))[W], east_obj=None
+Rectangle: Center(9.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((9,5), (9,6))[W], east_obj=None
+Rectangle: Center(9.5,6.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((9,6), (9,7))[W], east_obj=None
+Rectangle: Center(9.5,7.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((9,7), (9,8))[W], east_obj=None
+Rectangle: Center(9.5,8.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((9,8), (9,9))[W], east_obj=None
+Rectangle: Center(9.5,9.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(8.5,9.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((8,9), (9,9))[W], west_obj=None, east_obj=None
+Rectangle: Center(7.5,9.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((7,9), (8,9))[W], west_obj=None, east_obj=None
+Rectangle: Center(6.5,9.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((6,9), (7,9))[W], west_obj=None, east_obj=None
+Rectangle: Center(5.5,9.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((5,9), (6,9))[W], west_obj=None, east_obj=None
+Rectangle: Center(4.5,9.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((4,9), (5,9))[W], west_obj=None, east_obj=None
+Rectangle: Center(3.5,9.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(3.5,8.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((3,8), (3,9))[W], east_obj=Line((4,8), (4,9))[W]
+Rectangle: Center(3.5,7.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((4,7), (4,8))[W]
+Rectangle: Center(3.5,6.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((3,6), (3,7))[W], east_obj=None
+Rectangle: Center(4.5,6.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(4.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,5), (4,6))[W][D], east_obj=Line((5,5), (5,6))[W][D]
+Rectangle: Center(4.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((4,4), (4,5))[W][D], east_obj=None
+Rectangle: Center(5.5,4.5), Height: 1.0, Width: 1.0, north_obj=Line((5,5), (6,5))[W][D], south_obj=Line((5,4), (6,4))[W], west_obj=None, east_obj=None
+Rectangle: Center(6.5,4.5), Height: 1.0, Width: 1.0, north_obj=Line((6,5), (7,5))[W][D], south_obj=None, west_obj=None, east_obj=Line((7,4), (7,5))[W]
+Rectangle: Center(6.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((6,3), (6,4))[W], east_obj=Line((7,3), (7,4))[W]
+Rectangle: Center(6.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((6,2), (7,2))[W][D], west_obj=Line((6,2), (6,3))[W][D], east_obj=None
+Rectangle: Center(7.5,2.5), Height: 1.0, Width: 1.0, north_obj=Line((7,3), (8,3))[W], south_obj=Line((7,2), (8,2))[W], west_obj=None, east_obj=None
+---------------------------------------
+Is possible to resolve?: True
+Number of doors used: 9
+Number of cells used: 117
+---------------------------------------
+
+Path:
+Rectangle: Center(0.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(0.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,1), (1,2))[W]
+Rectangle: Center(0.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,2), (1,3))[W]
+Rectangle: Center(0.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(0.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,4), (1,5))[W]
+Rectangle: Center(0.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,5), (1,6))[W]
+Rectangle: Center(0.5,6.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,6), (1,7))[W][D]
+Rectangle: Center(0.5,7.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(0.5,8.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,8), (1,9))[W]
+Rectangle: Center(0.5,9.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,9), (1,10))[W]
+Rectangle: Center(0.5,10.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,10), (1,11))[W]
+Rectangle: Center(0.5,11.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,11), (1,12))[W]
+Rectangle: Center(0.5,12.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,12), (1,13))[W]
+Rectangle: Center(0.5,13.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,13), (1,14))[W]
+Rectangle: Center(0.5,14.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,14), (1,15))[W]
+Rectangle: Center(0.5,15.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,15), (1,16))[W]
+Rectangle: Center(0.5,16.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,16), (1,17))[W]
+Rectangle: Center(0.5,17.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,17), (1,18))[W]
+Rectangle: Center(0.5,18.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,18), (1,19))[W]
+Rectangle: Center(0.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,19), (1,20))[W]
+Rectangle: Center(0.5,20.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,20), (1,21))[W]
+Rectangle: Center(0.5,21.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,21), (1,22))[W]
+Rectangle: Center(0.5,22.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,22), (1,23))[W]
+Rectangle: Center(0.5,23.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,23), (1,24))[W]
+Rectangle: Center(0.5,24.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,24), (1,25))[W]
+Rectangle: Center(0.5,25.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,25), (1,26))[W]
+Rectangle: Center(0.5,26.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(0.5,27.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,27), (1,28))[W]
+Rectangle: Center(0.5,28.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,28), (1,29))[W]
+Rectangle: Center(0.5,29.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,29), (1,30))[W]
+Rectangle: Center(0.5,30.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,30), (1,31))[W]
+Rectangle: Center(0.5,31.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,31), (1,32))[W]
+Rectangle: Center(0.5,32.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,32), (1,33))[W]
+Rectangle: Center(0.5,33.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,33), (1,34))[W]
+Rectangle: Center(0.5,34.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,34), (1,35))[W]
+Rectangle: Center(0.5,35.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,35), (1,36))[W]
+Rectangle: Center(0.5,36.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,36), (1,37))[W]
+Rectangle: Center(0.5,37.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,37), (1,38))[W]
+Rectangle: Center(0.5,38.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,38), (1,39))[W]
+Rectangle: Center(0.5,39.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,39), (1,40))[W]
+Rectangle: Center(0.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(1.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((1,40), (2,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(2.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((2,40), (3,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(3.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((3,40), (4,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(4.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(5.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((5,40), (6,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(6.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((6,40), (7,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(7.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((7,40), (8,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(8.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((8,40), (9,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(9.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((9,40), (10,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(10.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((10,40), (11,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(11.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((11,40), (12,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(12.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((12,40), (13,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(13.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((13,40), (14,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(14.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((14,40), (15,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(15.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((15,40), (16,40))[W][D], west_obj=None, east_obj=None
+Rectangle: Center(16.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((16,40), (17,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(17.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((17,40), (18,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(18.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((18,40), (19,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(19.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((19,40), (20,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(20.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((20,40), (21,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(21.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((21,40), (22,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(22.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((22,40), (23,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(23.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((23,40), (24,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(24.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((24,40), (25,40))[W], west_obj=None, east_obj=None
+Rectangle: Center(25.5,40.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(25.5,39.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,39), (25,40))[W], east_obj=None
+Rectangle: Center(25.5,38.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,38), (25,39))[W], east_obj=None
+Rectangle: Center(25.5,37.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,37), (25,38))[W], east_obj=None
+Rectangle: Center(25.5,36.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,36), (25,37))[W], east_obj=None
+Rectangle: Center(25.5,35.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,35), (25,36))[W], east_obj=None
+Rectangle: Center(25.5,34.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,34), (25,35))[W], east_obj=None
+Rectangle: Center(25.5,33.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,33), (25,34))[W], east_obj=None
+Rectangle: Center(25.5,32.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,32), (25,33))[W], east_obj=None
+Rectangle: Center(25.5,31.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,31), (25,32))[W], east_obj=None
+Rectangle: Center(25.5,30.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,30), (25,31))[W], east_obj=None
+Rectangle: Center(25.5,29.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,29), (25,30))[W], east_obj=None
+Rectangle: Center(25.5,28.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,28), (25,29))[W], east_obj=None
+Rectangle: Center(25.5,27.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,27), (25,28))[W], east_obj=None
+Rectangle: Center(25.5,26.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,26), (25,27))[W], east_obj=None
+Rectangle: Center(25.5,25.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,25), (25,26))[W], east_obj=None
+Rectangle: Center(25.5,24.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,24), (25,25))[W], east_obj=None
+Rectangle: Center(25.5,23.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,23), (25,24))[W], east_obj=None
+Rectangle: Center(25.5,22.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,22), (25,23))[W], east_obj=None
+Rectangle: Center(25.5,21.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,21), (25,22))[W], east_obj=None
+Rectangle: Center(25.5,20.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,20), (25,21))[W], east_obj=None
+Rectangle: Center(25.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,19), (25,20))[W], east_obj=None
+Rectangle: Center(25.5,18.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,18), (25,19))[W], east_obj=None
+Rectangle: Center(25.5,17.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((25,17), (25,18))[W][D], east_obj=None
+Rectangle: Center(24.5,17.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((24,17), (25,17))[W], west_obj=Line((24,17), (24,18))[W], east_obj=Line((25,17), (25,18))[W][D]
+Rectangle: Center(24.5,18.5), Height: 1.0, Width: 1.0, north_obj=Line((24,19), (25,19))[W], south_obj=None, west_obj=None, east_obj=Line((25,18), (25,19))[W]
+Rectangle: Center(23.5,18.5), Height: 1.0, Width: 1.0, north_obj=Line((23,19), (24,19))[W][D], south_obj=Line((23,18), (24,18))[W][D], west_obj=None, east_obj=None
+Rectangle: Center(22.5,18.5), Height: 1.0, Width: 1.0, north_obj=Line((22,19), (23,19))[W][D], south_obj=Line((22,18), (23,18))[W], west_obj=Line((22,18), (22,19))[W], east_obj=None
+Rectangle: Center(22.5,19.5), Height: 1.0, Width: 1.0, north_obj=Line((22,20), (23,20))[W], south_obj=Line((22,19), (23,19))[W][D], west_obj=Line((22,19), (22,20))[W][D], east_obj=Line((23,19), (23,20))[W][D]
+Rectangle: Center(21.5,19.5), Height: 1.0, Width: 1.0, north_obj=Line((21,20), (22,20))[W], south_obj=Line((21,19), (22,19))[W], west_obj=Line((21,19), (21,20))[W][D], east_obj=Line((22,19), (22,20))[W][D]
+Rectangle: Center(20.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((20,19), (21,19))[W], west_obj=Line((20,19), (20,20))[W], east_obj=Line((21,19), (21,20))[W][D]
+Rectangle: Center(20.5,20.5), Height: 1.0, Width: 1.0, north_obj=Line((20,21), (21,21))[W][D], south_obj=None, west_obj=None, east_obj=Line((21,20), (21,21))[W]
+Rectangle: Center(19.5,20.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((19,20), (20,20))[W][D], west_obj=Line((19,20), (19,21))[W][D], east_obj=None
+Rectangle: Center(18.5,20.5), Height: 1.0, Width: 1.0, north_obj=Line((18,21), (19,21))[W], south_obj=Line((18,20), (19,20))[W], west_obj=None, east_obj=Line((19,20), (19,21))[W][D]
+Rectangle: Center(17.5,20.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((17,20), (17,21))[W][D], east_obj=None
+Rectangle: Center(17.5,21.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((17,21), (17,22))[W], east_obj=Line((18,21), (18,22))[W][D]
+Rectangle: Center(17.5,22.5), Height: 1.0, Width: 1.0, north_obj=Line((17,23), (18,23))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(16.5,22.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((16,22), (17,22))[W][D], west_obj=None, east_obj=None
+Rectangle: Center(15.5,22.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((15,22), (15,23))[W], east_obj=None
+Rectangle: Center(15.5,21.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((15,21), (15,22))[W], east_obj=None
+Rectangle: Center(15.5,20.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((16,20), (16,21))[W]
+Rectangle: Center(14.5,20.5), Height: 1.0, Width: 1.0, north_obj=Line((14,21), (15,21))[W], south_obj=Line((14,20), (15,20))[W][D], west_obj=Line((14,20), (14,21))[W][D], east_obj=None
+Rectangle: Center(14.5,19.5), Height: 1.0, Width: 1.0, north_obj=Line((14,20), (15,20))[W][D], south_obj=None, west_obj=Line((14,19), (14,20))[W], east_obj=Line((15,19), (15,20))[W][D]
+Rectangle: Center(14.5,18.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((14,18), (15,18))[W][D], west_obj=Line((14,18), (14,19))[W][D], east_obj=Line((15,18), (15,19))[W][D]
+Rectangle: Center(13.5,18.5), Height: 1.0, Width: 1.0, north_obj=Line((13,19), (14,19))[W][D], south_obj=None, west_obj=None, east_obj=Line((14,18), (14,19))[W][D]
+Rectangle: Center(12.5,18.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(11.5,18.5), Height: 1.0, Width: 1.0, north_obj=Line((11,19), (12,19))[W][D], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(11.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((11,19), (12,19))[W][D], west_obj=Line((11,19), (11,20))[W][D], east_obj=Line((12,19), (12,20))[W]
+Rectangle: Center(11.5,20.5), Height: 1.0, Width: 1.0, north_obj=Line((11,21), (12,21))[W][D], south_obj=None, west_obj=None, east_obj=Line((12,20), (12,21))[W][D]
+Rectangle: Center(10.5,20.5), Height: 1.0, Width: 1.0, north_obj=Line((10,21), (11,21))[W][D], south_obj=Line((10,20), (11,20))[W], west_obj=Line((10,20), (10,21))[W], east_obj=None
+Rectangle: Center(10.5,21.5), Height: 1.0, Width: 1.0, north_obj=Line((10,22), (11,22))[W][D], south_obj=Line((10,21), (11,21))[W][D], west_obj=None, east_obj=None
+Rectangle: Center(9.5,21.5), Height: 1.0, Width: 1.0, north_obj=Line((9,22), (10,22))[W][D], south_obj=Line((9,21), (10,21))[W][D], west_obj=None, east_obj=None
+---------------------------------------
+Is possible to resolve?: True
+Number of doors used: 9
+Number of cells used: 64
+---------------------------------------
+
+Path:
+Rectangle: Center(0.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(1.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((1,1), (2,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(2.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((2,1), (3,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(3.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((3,1), (4,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(4.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((4,1), (5,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(5.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((5,1), (6,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(6.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((6,1), (7,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(7.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((7,1), (8,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(8.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((8,1), (9,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(9.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((9,1), (10,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(10.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((10,1), (11,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(11.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((11,1), (12,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(12.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((12,1), (13,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(13.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((13,1), (14,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(14.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((14,1), (15,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(15.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((15,1), (16,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(16.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((16,1), (17,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(17.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((17,1), (18,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(18.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((18,1), (19,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(19.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((19,1), (20,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(20.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((20,1), (21,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(21.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((21,1), (22,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(22.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((22,1), (23,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(23.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((23,1), (24,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(24.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(24.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((24,1), (24,2))[W], east_obj=None
+Rectangle: Center(24.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((24,2), (24,3))[W], east_obj=None
+Rectangle: Center(24.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((24,3), (24,4))[W], east_obj=None
+Rectangle: Center(24.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((24,4), (24,5))[W], east_obj=None
+Rectangle: Center(24.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((24,5), (24,6))[W], east_obj=None
+Rectangle: Center(24.5,6.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((24,6), (24,7))[W], east_obj=None
+Rectangle: Center(24.5,7.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((24,7), (24,8))[W], east_obj=None
+Rectangle: Center(24.5,8.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((24,8), (24,9))[W], east_obj=None
+Rectangle: Center(24.5,9.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((24,9), (24,10))[W][D], east_obj=None
+Rectangle: Center(23.5,9.5), Height: 1.0, Width: 1.0, north_obj=Line((23,10), (24,10))[W], south_obj=Line((23,9), (24,9))[W], west_obj=None, east_obj=Line((24,9), (24,10))[W][D]
+Rectangle: Center(22.5,9.5), Height: 1.0, Width: 1.0, north_obj=Line((22,10), (23,10))[W], south_obj=None, west_obj=Line((22,9), (22,10))[W], east_obj=None
+Rectangle: Center(22.5,8.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((22,8), (23,8))[W], west_obj=Line((22,8), (22,9))[W][D], east_obj=Line((23,8), (23,9))[W]
+Rectangle: Center(21.5,8.5), Height: 1.0, Width: 1.0, north_obj=Line((21,9), (22,9))[W], south_obj=Line((21,8), (22,8))[W][D], west_obj=Line((21,8), (21,9))[W], east_obj=Line((22,8), (22,9))[W][D]
+Rectangle: Center(21.5,7.5), Height: 1.0, Width: 1.0, north_obj=Line((21,8), (22,8))[W][D], south_obj=Line((21,7), (22,7))[W], west_obj=Line((21,7), (21,8))[W][D], east_obj=Line((22,7), (22,8))[W]
+Rectangle: Center(20.5,7.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((20,7), (21,7))[W], west_obj=Line((20,7), (20,8))[W][D], east_obj=Line((21,7), (21,8))[W][D]
+Rectangle: Center(20.5,8.5), Height: 1.0, Width: 1.0, north_obj=Line((20,9), (21,9))[W], south_obj=None, west_obj=None, east_obj=Line((21,8), (21,9))[W]
+Rectangle: Center(19.5,8.5), Height: 1.0, Width: 1.0, north_obj=Line((19,9), (20,9))[W], south_obj=Line((19,8), (20,8))[W][D], west_obj=None, east_obj=None
+Rectangle: Center(18.5,8.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(18.5,7.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(18.5,6.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((18,6), (19,6))[W], west_obj=None, east_obj=Line((19,6), (19,7))[W]
+Rectangle: Center(17.5,6.5), Height: 1.0, Width: 1.0, north_obj=Line((17,7), (18,7))[W][D], south_obj=Line((17,6), (18,6))[W][D], west_obj=None, east_obj=None
+Rectangle: Center(16.5,6.5), Height: 1.0, Width: 1.0, north_obj=Line((16,7), (17,7))[W], south_obj=Line((16,6), (17,6))[W][D], west_obj=Line((16,6), (16,7))[W][D], east_obj=None
+Rectangle: Center(15.5,6.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((16,6), (16,7))[W][D]
+Rectangle: Center(15.5,7.5), Height: 1.0, Width: 1.0, north_obj=Line((15,8), (16,8))[W], south_obj=None, west_obj=None, east_obj=Line((16,7), (16,8))[W]
+Rectangle: Center(14.5,7.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((14,7), (15,7))[W][D], west_obj=Line((14,7), (14,8))[W][D], east_obj=None
+Rectangle: Center(13.5,7.5), Height: 1.0, Width: 1.0, north_obj=Line((13,8), (14,8))[W], south_obj=Line((13,7), (14,7))[W], west_obj=None, east_obj=Line((14,7), (14,8))[W][D]
+Rectangle: Center(12.5,7.5), Height: 1.0, Width: 1.0, north_obj=Line((12,8), (13,8))[W][D], south_obj=Line((12,7), (13,7))[W], west_obj=Line((12,7), (12,8))[W], east_obj=None
+Rectangle: Center(12.5,8.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((12,8), (13,8))[W][D], west_obj=Line((12,8), (12,9))[W], east_obj=None
+Rectangle: Center(12.5,9.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((12,9), (12,10))[W], east_obj=Line((13,9), (13,10))[W]
+Rectangle: Center(12.5,10.5), Height: 1.0, Width: 1.0, north_obj=Line((12,11), (13,11))[W], south_obj=None, west_obj=None, east_obj=Line((13,10), (13,11))[W][D]
+Rectangle: Center(11.5,10.5), Height: 1.0, Width: 1.0, north_obj=Line((11,11), (12,11))[W][D], south_obj=Line((11,10), (12,10))[W], west_obj=None, east_obj=None
+Rectangle: Center(10.5,10.5), Height: 1.0, Width: 1.0, north_obj=Line((10,11), (11,11))[W], south_obj=Line((10,10), (11,10))[W], west_obj=None, east_obj=None
+Rectangle: Center(9.5,10.5), Height: 1.0, Width: 1.0, north_obj=Line((9,11), (10,11))[W], south_obj=None, west_obj=Line((9,10), (9,11))[W][D], east_obj=None
+Rectangle: Center(9.5,9.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((9,9), (10,9))[W], west_obj=None, east_obj=Line((10,9), (10,10))[W]
+Rectangle: Center(8.5,9.5), Height: 1.0, Width: 1.0, north_obj=Line((8,10), (9,10))[W], south_obj=Line((8,9), (9,9))[W], west_obj=Line((8,9), (8,10))[W][D], east_obj=None
+Rectangle: Center(7.5,9.5), Height: 1.0, Width: 1.0, north_obj=Line((7,10), (8,10))[W][D], south_obj=None, west_obj=Line((7,9), (7,10))[W], east_obj=Line((8,9), (8,10))[W][D]
+Rectangle: Center(7.5,8.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((7,8), (8,8))[W][D], west_obj=Line((7,8), (7,9))[W], east_obj=Line((8,8), (8,9))[W]
+Rectangle: Center(7.5,7.5), Height: 1.0, Width: 1.0, north_obj=Line((7,8), (8,8))[W][D], south_obj=Line((7,7), (8,7))[W], west_obj=None, east_obj=Line((8,7), (8,8))[W]
+Rectangle: Center(6.5,7.5), Height: 1.0, Width: 1.0, north_obj=Line((6,8), (7,8))[W], south_obj=Line((6,7), (7,7))[W], west_obj=Line((6,7), (6,8))[W], east_obj=None
+---------------------------------------
+Is possible to resolve?: True
+Number of doors used: 11
+Number of cells used: 101
+---------------------------------------
+
+Path:
+Rectangle: Center(0.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(0.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,1), (1,2))[W]
+Rectangle: Center(0.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(0.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,3), (1,4))[W]
+Rectangle: Center(0.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,4), (1,5))[W]
+Rectangle: Center(0.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,5), (1,6))[W]
+Rectangle: Center(0.5,6.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,6), (1,7))[W]
+Rectangle: Center(0.5,7.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,7), (1,8))[W]
+Rectangle: Center(0.5,8.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,8), (1,9))[W]
+Rectangle: Center(0.5,9.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,9), (1,10))[W]
+Rectangle: Center(0.5,10.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,10), (1,11))[W]
+Rectangle: Center(0.5,11.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,11), (1,12))[W]
+Rectangle: Center(0.5,12.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,12), (1,13))[W]
+Rectangle: Center(0.5,13.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,13), (1,14))[W]
+Rectangle: Center(0.5,14.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,14), (1,15))[W]
+Rectangle: Center(0.5,15.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,15), (1,16))[W]
+Rectangle: Center(0.5,16.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,16), (1,17))[W]
+Rectangle: Center(0.5,17.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,17), (1,18))[W]
+Rectangle: Center(0.5,18.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=Line((1,18), (1,19))[W]
+Rectangle: Center(0.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(1.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((1,19), (2,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(2.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((2,19), (3,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(3.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((3,19), (4,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(4.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((4,19), (5,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(5.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((5,19), (6,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(6.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((6,19), (7,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(7.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((7,19), (8,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(8.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((8,19), (9,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(9.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((9,19), (10,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(10.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((10,19), (11,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(11.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((11,19), (12,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(12.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((12,19), (13,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(13.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((13,19), (14,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(14.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((14,19), (15,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(15.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((15,19), (16,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(16.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((16,19), (17,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(17.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((17,19), (18,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(18.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((18,19), (19,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(19.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((19,19), (20,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(20.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((20,19), (21,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(21.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((21,19), (22,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(22.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((22,19), (23,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(23.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((23,19), (24,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(24.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((24,19), (25,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(25.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((25,19), (26,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(26.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((26,19), (27,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(27.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((27,19), (28,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(28.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((28,19), (29,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(29.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((29,19), (30,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(30.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((30,19), (31,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(31.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((31,19), (32,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(32.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((32,19), (33,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(33.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((33,19), (34,19))[W], west_obj=None, east_obj=None
+Rectangle: Center(34.5,19.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(34.5,18.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((34,18), (34,19))[W], east_obj=None
+Rectangle: Center(34.5,17.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((34,17), (34,18))[W], east_obj=None
+Rectangle: Center(34.5,16.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((34,16), (34,17))[W], east_obj=None
+Rectangle: Center(34.5,15.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((34,15), (34,16))[W], east_obj=None
+Rectangle: Center(34.5,14.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((34,14), (34,15))[W], east_obj=None
+Rectangle: Center(34.5,13.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((34,13), (34,14))[W], east_obj=None
+Rectangle: Center(34.5,12.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((34,12), (34,13))[W], east_obj=None
+Rectangle: Center(34.5,11.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((34,11), (34,12))[W], east_obj=None
+Rectangle: Center(34.5,10.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((34,10), (34,11))[W], east_obj=None
+Rectangle: Center(34.5,9.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((34,9), (34,10))[W], east_obj=None
+Rectangle: Center(34.5,8.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((34,8), (34,9))[W], east_obj=None
+Rectangle: Center(34.5,7.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((34,7), (34,8))[W], east_obj=None
+Rectangle: Center(34.5,6.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((34,6), (34,7))[W], east_obj=None
+Rectangle: Center(34.5,5.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((34,5), (34,6))[W], east_obj=None
+Rectangle: Center(34.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((34,4), (34,5))[W], east_obj=None
+Rectangle: Center(34.5,3.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((34,3), (34,4))[W], east_obj=None
+Rectangle: Center(34.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((34,2), (34,3))[W], east_obj=None
+Rectangle: Center(34.5,1.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((34,1), (34,2))[W], east_obj=None
+Rectangle: Center(34.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(33.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((33,1), (34,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(32.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((32,1), (33,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(31.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((31,1), (32,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(30.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((30,1), (31,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(29.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((29,1), (30,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(28.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((28,1), (29,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(27.5,0.5), Height: 1.0, Width: 1.0, north_obj=Line((27,1), (28,1))[W], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(26.5,0.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(26.5,1.5), Height: 1.0, Width: 1.0, north_obj=Line((26,2), (27,2))[W][D], south_obj=None, west_obj=None, east_obj=None
+Rectangle: Center(26.5,2.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((26,2), (27,2))[W][D], west_obj=Line((26,2), (26,3))[W][D], east_obj=Line((27,2), (27,3))[W]
+Rectangle: Center(26.5,3.5), Height: 1.0, Width: 1.0, north_obj=Line((26,4), (27,4))[W][D], south_obj=None, west_obj=Line((26,3), (26,4))[W], east_obj=Line((27,3), (27,4))[W]
+Rectangle: Center(26.5,4.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((26,4), (27,4))[W][D], west_obj=Line((26,4), (26,5))[W], east_obj=Line((27,4), (27,5))[W][D]
+Rectangle: Center(26.5,5.5), Height: 1.0, Width: 1.0, north_obj=Line((26,6), (27,6))[W][D], south_obj=None, west_obj=Line((26,5), (26,6))[W], east_obj=Line((27,5), (27,6))[W]
+Rectangle: Center(26.5,6.5), Height: 1.0, Width: 1.0, north_obj=Line((26,7), (27,7))[W][D], south_obj=Line((26,6), (27,6))[W][D], west_obj=Line((26,6), (26,7))[W], east_obj=Line((27,6), (27,7))[W]
+Rectangle: Center(26.5,7.5), Height: 1.0, Width: 1.0, north_obj=Line((26,8), (27,8))[W], south_obj=Line((26,7), (27,7))[W][D], west_obj=Line((26,7), (26,8))[W][D], east_obj=Line((27,7), (27,8))[W]
+Rectangle: Center(25.5,7.5), Height: 1.0, Width: 1.0, north_obj=Line((25,8), (26,8))[W], south_obj=Line((25,7), (26,7))[W][D], west_obj=None, east_obj=Line((26,7), (26,8))[W][D]
+Rectangle: Center(24.5,7.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((24,7), (25,7))[W], west_obj=Line((24,7), (24,8))[W], east_obj=None
+Rectangle: Center(24.5,8.5), Height: 1.0, Width: 1.0, north_obj=Line((24,9), (25,9))[W], south_obj=None, west_obj=Line((24,8), (24,9))[W][D], east_obj=Line((25,8), (25,9))[W][D]
+Rectangle: Center(23.5,8.5), Height: 1.0, Width: 1.0, north_obj=Line((23,9), (24,9))[W][D], south_obj=Line((23,8), (24,8))[W], west_obj=Line((23,8), (23,9))[W], east_obj=Line((24,8), (24,9))[W][D]
+Rectangle: Center(23.5,9.5), Height: 1.0, Width: 1.0, north_obj=Line((23,10), (24,10))[W][D], south_obj=Line((23,9), (24,9))[W][D], west_obj=None, east_obj=None
+Rectangle: Center(22.5,9.5), Height: 1.0, Width: 1.0, north_obj=Line((22,10), (23,10))[W][D], south_obj=None, west_obj=Line((22,9), (22,10))[W], east_obj=None
+Rectangle: Center(22.5,10.5), Height: 1.0, Width: 1.0, north_obj=Line((22,11), (23,11))[W], south_obj=Line((22,10), (23,10))[W][D], west_obj=None, east_obj=None
+Rectangle: Center(21.5,10.5), Height: 1.0, Width: 1.0, north_obj=Line((21,11), (22,11))[W][D], south_obj=Line((21,10), (22,10))[W][D], west_obj=Line((21,10), (21,11))[W][D], east_obj=None
+Rectangle: Center(21.5,11.5), Height: 1.0, Width: 1.0, north_obj=Line((21,12), (22,12))[W], south_obj=Line((21,11), (22,11))[W][D], west_obj=None, east_obj=Line((22,11), (22,12))[W]
+Rectangle: Center(20.5,11.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=None, west_obj=Line((20,11), (20,12))[W], east_obj=None
+Rectangle: Center(20.5,12.5), Height: 1.0, Width: 1.0, north_obj=Line((20,13), (21,13))[W], south_obj=None, west_obj=Line((20,12), (20,13))[W], east_obj=Line((21,12), (21,13))[W][D]
+Rectangle: Center(21.5,12.5), Height: 1.0, Width: 1.0, north_obj=Line((21,13), (22,13))[W][D], south_obj=Line((21,12), (22,12))[W], west_obj=Line((21,12), (21,13))[W][D], east_obj=Line((22,12), (22,13))[W]
+Rectangle: Center(21.5,13.5), Height: 1.0, Width: 1.0, north_obj=None, south_obj=Line((21,13), (22,13))[W][D], west_obj=Line((21,13), (21,14))[W], east_obj=Line((22,13), (22,14))[W]
