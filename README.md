@@ -78,3 +78,27 @@ See full `src/labyrinth/Labyrinth.py` for more context
 ### Path reconstruction
 Each node it is stored in a dictionary `came_from[actual_node] = parent_node`
 So reconstructing the path is a recursive operation from `came_from[goal_node] = parent` and so until reach the `initial_node`
+```
+def _reconstruct_path(self, came_from: dict, current_node: CellNode) -> 'list[CellNode]':
+        """
+        Return list with the path to reach the current node from a start node.
+        
+        Using backtracking of dictionary structure {current_node : came_from_node}.
+
+        Arguments:
+            came_from: dict{CellNode : Cell:Node}
+                Dictionary with all the nodes used and the parent node
+            current_node: CellNode
+                Node to get the path from the start
+        return: 
+            list[CellNode], that are in inverse order of the path =
+            [current, parent, grandparent, ..., grandgrand..., start]
+        """
+        
+        total_path = [current_node]
+        while came_from.get(current_node):
+            current_node = came_from[current_node]
+            total_path.append(current_node)
+        
+        return total_path
+```
