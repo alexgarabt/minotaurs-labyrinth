@@ -432,7 +432,7 @@ class Labyrinth:
         """
         return node.manhattan_distance(goal.cell.center)
         
-    def A_STAR_SEARCH(self, start: CellNode, goal: CellNode):
+    def A_STAR_SEARCH(self, start: CellNode, goal: CellNode) -> list[bool, dict, dict]:
         """
         A* algorithm of heuristic search for graphs
         For fiding the minimum path with min number of doors between two nodes
@@ -446,7 +446,14 @@ class Labyrinth:
                 Start node of the path
             goal: CellNode
                 Goal node to reach from the start node
-
+        Return:
+            A list
+            list[0]: Boolean
+                Indicates if there is a path
+            list[1]: dict
+                Dictionary came_from that indicates each node who is it parent node (where it came from)
+            list[2]: dict
+                Dictionary cost_so_far that contains the cost of reach each node
         """
         # 
 
