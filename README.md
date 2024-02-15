@@ -73,7 +73,7 @@ Minimal path now is defined as the path that uses the min number of doors(first)
 
 ### Implementation 
 See full `src/labyrinth/Labyrinth.py` for more context  
-![Implementation of the algorithm](img/a_star_impl.png "Implementation of the algorithm")
+![Implementation of the algorithm](img/a-star_impl.png "Implementation of the algorithm")
 
 ### Path reconstruction
 Each node it is stored in a dictionary `came_from[actual_node] = parent_node`
@@ -102,3 +102,10 @@ def _reconstruct_path(self, came_from: dict, current_node: CellNode) -> 'list[Ce
         
         return total_path
 ```
+
+### How to reach one point to other with minimal path
+Example is `teseo_to_minotaurs()` in 'src/labyrinth/Labyrinth.py`  
+
+- First get the cell that contains each point with `self.get_node_contains(self.teseo)` (is a list because a point could be in 4 cells in the edge) 
+- Second check the nodes are not null.
+- Third call `self.A_STAR_SEARCH(init_node, goal_node)` <- return a lis
